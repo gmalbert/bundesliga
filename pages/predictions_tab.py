@@ -41,6 +41,24 @@ if preds_log.empty:
     st.info("No upcoming predictions available yet. Check back after the next nightly update.")
     st.stop()
 
+# ── Model version selector ────────────────────────────────────────────────
+available_models = sorted(preds_log["ModelVersion"].dropna().unique()) if "ModelVersion" in preds_log.columns else ["ensemble_v1"]
+model_labels = {
+    "ensemble_v1": "🤝 Ensemble (XGB + RF + GB + LR)",
+    "nn_v1":       "🧠 Neural Network (LaLigaNet)",
+}
+if len(available_models) > 1:
+    sel_model = st.selectbox(
+        "Model",
+        options=available_models,
+        format_func=lambda x: model_labels.get(x, x),
+        key="model_version_sel",
+    )
+    preds_log = preds_log[preds_log["ModelVersion"] == sel_model].copy()
+else:
+    sel_model = available_models[0] if available_models else "ensemble_v1"
+
+
 # Attach kick-off times from the fixtures file
 if path.exists(FIXTURES_PATH):
     fix_times = pd.read_csv(FIXTURES_PATH)[["HomeTeam", "AwayTeam", "Date", "Time"]]
@@ -109,8 +127,44 @@ if fc3.button("🟡 Moderate",     use_container_width=True): st.session_state["
 if fc4.button("🔴 High",         use_container_width=True): st.session_state["risk_filter"] = "High"
 if fc5.button("🚨 Critical",     use_container_width=True): st.session_state["risk_filter"] = "Critical"
 
+# ── Team filter ────────────────────────────────────────────────────────────
+all_teams = sorted(set(preds["HomeTeam"].dropna()) | set(preds["AwayTeam"].dropna()))
+selected_teams = st.multiselect(
+    "Filter by team (leave blank for all):",
+    options=all_teams,
+    default=[],
+    key="team_filter",
+    placeholder="All teams",
+)
+
+# ── Date range filter ──────────────────────────────────────────────────────
+preds["_dt"] = pd.to_datetime(preds["Date"], errors="coerce")
+min_date = preds["_dt"].min().date() if preds["_dt"].notna().any() else None
+max_date = preds["_dt"].max().date() if preds["_dt"].notna().any() else None
+
+if min_date and max_date and min_date < max_date:
+    dr_col1, dr_col2 = st.columns(2)
+    with dr_col1:
+        date_from = st.date_input("From date", value=min_date, min_value=min_date, max_value=max_date, key="date_from")
+    with dr_col2:
+        date_to   = st.date_input("To date",   value=max_date, min_value=min_date, max_value=max_date, key="date_to")
+else:
+    date_from = min_date
+    date_to   = max_date
+
+# Apply all filters
 _filter = st.session_state.get("risk_filter", "All")
-filtered = preds if _filter == "All" else preds[preds["Risk Category"].str.contains(_filter, na=False)]
+filtered = preds.copy()
+if _filter != "All":
+    filtered = filtered[filtered["Risk Category"].str.contains(_filter, na=False)]
+if selected_teams:
+    filtered = filtered[
+        filtered["HomeTeam"].isin(selected_teams) | filtered["AwayTeam"].isin(selected_teams)
+    ]
+if date_from and date_to:
+    filtered = filtered[
+        (filtered["_dt"].dt.date >= date_from) & (filtered["_dt"].dt.date <= date_to)
+    ]
 
 if filtered.empty:
     st.info(f"No predictions with risk level: {_filter}")

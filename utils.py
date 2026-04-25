@@ -59,6 +59,26 @@ LA_LIGA_AVG_HOME_GOALS = 1.45
 LA_LIGA_AVG_AWAY_GOALS = 1.12
 
 
+# ── Display Helpers ────────────────────────────────────────────────────────
+
+def show_last_updated(file_path: str, label: str = "Data") -> None:
+    """Render a caption showing how long ago a file was last modified."""
+    if not path.exists(file_path):
+        return
+    mtime = os.path.getmtime(file_path)
+    delta = datetime.now() - datetime.fromtimestamp(mtime)
+    days  = delta.days
+    hours = delta.seconds // 3600
+    mins  = (delta.seconds % 3600) // 60
+    if days > 0:
+        age = f"{days}d {hours}h ago"
+    elif hours > 0:
+        age = f"{hours}h {mins}m ago"
+    else:
+        age = f"{mins}m ago"
+    st.caption(f"🕐 {label} last updated: {age}")
+
+
 # ── Data Loading ───────────────────────────────────────────────────────────
 
 @st.cache_data(ttl=3600)

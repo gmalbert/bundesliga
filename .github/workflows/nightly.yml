@@ -49,17 +49,25 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python fetch_odds.py
 
+      - name: Fetch weather forecast for upcoming fixtures
+        run: python fetch_weather_data.py
+
       # ── Model pipeline ──────────────────────────────────────────────────
 
       - name: Prepare model-ready features
         run: python prepare_model_data.py
 
-      - name: Train and save ensemble + Poisson models
+      - name: Train ensemble, Poisson, and neural network models
         run: python train_models.py
+
+      # ── Post-training analysis ──────────────────────────────────────────
+
+      - name: Run historical backtest
+        run: python backtest.py
 
       # ── Pre-generate predictions so the app reads from cache ────────────
 
-      - name: Pre-generate predictions log
+      - name: Pre-generate predictions log (ensemble + neural network)
         run: python automation/generate_predictions.py
 
       # ── Validate & commit ───────────────────────────────────────────────

@@ -1,21 +1,90 @@
-"""Statistics page — xG rankings, team form, H2H, Copa del Rey congestion."""
+"""Statistics page — xG rankings, team form, H2H, Copa del Rey congestion, feature importance."""
 
+from __future__ import annotations
+import json
 from os import path
 
 import pandas as pd
+import plotly.express as px
 import streamlit as st
 
 from utils import get_dataframe_height, load_historical_data
 
-HIST_PATH = "data_files/combined_historical_data.csv"
+HIST_PATH     = "data_files/combined_historical_data.csv"
+METRICS_PATH  = "models/metrics.json"
+BACKTEST_PATH = "models/backtest_results.json"
 
 st.title("📊 Statistics")
 
 if not path.exists(HIST_PATH):
-    st.info("Run `python fetch_historical_csvs.py` to unlock statistics.")
+    st.info("Historical data not yet available — data is refreshed nightly via GitHub Actions.")
     st.stop()
 
 hist_df = load_historical_data(HIST_PATH)
+
+
+# ── Feature Importance ────────────────────────────────────────────────────
+st.subheader("🧠 Model Feature Importance")
+if path.exists(METRICS_PATH):
+    with open(METRICS_PATH) as f:
+        m = json.load(f)
+
+    from utils import FEATURE_COLS as _FEATURE_COLS
+    feat_names = m.get("feature_cols", []) or _FEATURE_COLS
+
+    # Try to get XGBoost feature importances from the saved model
+    try:
+        import pickle
+        with open("models/ensemble_model.pkl", "rb") as f:
+            ensemble = pickle.load(f)
+
+        # VotingClassifier.named_estimators_ is a dict {name: fitted_estimator}
+        xgb_est = ensemble.named_estimators_.get("xgb")
+
+        if xgb_est is not None and hasattr(xgb_est, "feature_importances_"):
+            importances = xgb_est.feature_importances_
+            n = min(len(importances), len(feat_names))
+            fi_df = pd.DataFrame({
+                "Feature":    feat_names[:n],
+                "Importance": importances[:n],
+            }).sort_values("Importance", ascending=True)
+
+            fig = px.bar(
+                fi_df,
+                x="Importance",
+                y="Feature",
+                orientation="h",
+                title="XGBoost Feature Importances (Gain)",
+                color="Importance",
+                color_continuous_scale="reds",
+            )
+            fig.update_layout(coloraxis_showscale=False, yaxis_title=None)
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info("Feature importance chart not available — model does not expose importances.")
+    except Exception as _e:
+        st.info(f"Feature importance chart not available — {_e}")
+else:
+    st.info("Model metrics not found — data is refreshed nightly.")
+
+st.divider()
+
+
+# ── Backtest Summary ──────────────────────────────────────────────────────
+st.subheader("🧪 Backtest Summary")
+if path.exists(BACKTEST_PATH):
+    with open(BACKTEST_PATH) as f:
+        bt = json.load(f)
+    bc1, bc2, bc3, bc4 = st.columns(4)
+    bc1.metric("Backtest Accuracy",  f"{bt.get('accuracy', 0):.1%}")
+    bc2.metric("Brier Score",        f"{bt.get('brier_score', 0):.4f}")
+    bc3.metric("Bets Placed",        bt.get("n_bets_placed", 0))
+    bc4.metric("Flat-Stake ROI",     f"{bt.get('roi_pct', 0):+.1f}%")
+    st.caption("Full details on the **📈 Performance** page.")
+else:
+    st.info("Backtest results not yet available — refreshed nightly.")
+
+st.divider()
 
 
 # ── xG Rankings ───────────────────────────────────────────────────────────
@@ -28,7 +97,7 @@ if path.exists(fbref_path):
     st.dataframe(xg_df, hide_index=True, use_container_width=True,
                  height=get_dataframe_height(xg_df, max_height=500))
 else:
-    st.info("xG data not loaded. Run `python fetch_fbref_xg.py`.")
+    st.info("xG data not yet available — refreshed nightly.")
 
 st.divider()
 
@@ -138,4 +207,4 @@ if path.exists(copa_path):
         st.warning(f"⚠️ {flagged} team(s) played Copa del Rey in the last 7 days.")
         st.dataframe(recent_copa, hide_index=True, use_container_width=True)
 else:
-    st.info("Copa del Rey data not loaded. Run `python fetch_copa_fixtures.py`.")
+    st.info("Copa del Rey data not yet available — refreshed nightly.")

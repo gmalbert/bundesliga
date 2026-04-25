@@ -21,9 +21,16 @@ from sklearn.linear_model import LogisticRegression
 from xgboost import XGBClassifier
 
 
-def create_ensemble_model() -> VotingClassifier:
-    """Return an unfitted soft-voting ensemble."""
-    xgb = XGBClassifier(
+def create_ensemble_model(xgb_params: dict | None = None) -> VotingClassifier:
+    """Return an unfitted soft-voting ensemble.
+
+    Parameters
+    ----------
+    xgb_params : optional dict of XGBoost hyperparameters to override defaults.
+                 Typically loaded from models/best_hyperparams.json after an
+                 --optimize run.
+    """
+    defaults = dict(
         n_estimators=200,
         max_depth=6,
         learning_rate=0.1,
@@ -33,6 +40,9 @@ def create_ensemble_model() -> VotingClassifier:
         random_state=42,
         verbosity=0,
     )
+    if xgb_params:
+        defaults.update(xgb_params)
+    xgb = XGBClassifier(**defaults)
     rf = RandomForestClassifier(
         n_estimators=200,
         max_depth=8,

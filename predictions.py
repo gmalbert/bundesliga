@@ -73,8 +73,9 @@ pg = st.navigation(
             st.Page("pages/raw_data.py",        title="Raw Data",             icon="📁"),
         ],
         "💰 Betting": [
-            st.Page("pages/markets.py",   title="Markets",   icon="📈"),
-            st.Page("pages/best_bets.py", title="Best Bets", icon="💰"),
+            st.Page("pages/markets.py",     title="Markets",    icon="📈"),
+            st.Page("pages/best_bets.py",   title="Best Bets",  icon="💰"),
+            st.Page("pages/performance.py", title="Performance", icon="📈"),
         ],
     }
 )
