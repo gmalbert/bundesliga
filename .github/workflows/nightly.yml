@@ -1,0 +1,76 @@
+name: Nightly Data + Model Update
+
+on:
+  schedule:
+    - cron: "0 7 * * *"   # 3:00 AM ET (UTC-4 summer / UTC-5 winter)
+  workflow_dispatch:        # Allow manual trigger from GitHub Actions UI
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── Data fetch ──────────────────────────────────────────────────────
+
+      - name: Fetch historical match data
+        env:
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
+        run: python fetch_historical_csvs.py
+
+      - name: Fetch upcoming fixtures
+        env:
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
+        run: python fetch_upcoming_fixtures.py
+
+      - name: Fetch xG proxy from historical data
+        run: python fetch_fbref_xg.py
+
+      - name: Fetch Copa del Rey fixtures
+        run: python fetch_copa_fixtures.py
+
+      - name: Fetch bookmaker odds
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python fetch_odds.py
+
+      # ── Model pipeline ──────────────────────────────────────────────────
+
+      - name: Prepare model-ready features
+        run: python prepare_model_data.py
+
+      - name: Train and save ensemble + Poisson models
+        run: python train_models.py
+
+      # ── Pre-generate predictions so the app reads from cache ────────────
+
+      - name: Pre-generate predictions log
+        run: python automation/generate_predictions.py
+
+      # ── Validate & commit ───────────────────────────────────────────────
+
+      - name: Validate prediction log
+        run: python track_predictions.py --validate
+
+      - name: Commit updated data, models, and predictions
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data_files/ models/
+          git diff --staged --quiet || git commit -m "chore: nightly update $(date -u +%Y-%m-%d)"
+          git push

@@ -1,0 +1,16 @@
+name: Keep App Alive
+
+on:
+  schedule:
+    - cron: "0 12 * * *"   # 8:00 AM ET daily
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping La Liga Linea app
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            https://la-liga-linea.streamlit.app/ || echo "000")
+          echo "HTTP status: $STATUS"
