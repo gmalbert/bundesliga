@@ -1,4 +1,4 @@
-"""Shared utilities for La Liga Linea.
+"""Shared utilities for Bet Bundesliga.
 
 Includes: data loading, feature engineering, model training/loading,
 standings computation, prediction risk scoring, and display helpers.
@@ -54,9 +54,9 @@ FEATURE_COLS: list[str] = [
 RESULT_MAP  = {"A": 0, "D": 1, "H": 2}
 RESULT_RMAP = {0: "A", 1: "D", 2: "H"}
 
-# La Liga average goal rates (2015-16 → 2023-24)
-LA_LIGA_AVG_HOME_GOALS = 1.45
-LA_LIGA_AVG_AWAY_GOALS = 1.12
+# Bundesliga average goal rates (2015-16 → 2023-24)
+BUNDESLIGA_AVG_HOME_GOALS = 1.70
+BUNDESLIGA_AVG_AWAY_GOALS = 1.35
 
 
 # ── Display Helpers ────────────────────────────────────────────────────────
@@ -123,7 +123,7 @@ def load_upcoming_fixtures(csv_path: str) -> pd.DataFrame:
 
 # ── Feature Engineering ────────────────────────────────────────────────────
 
-def calculate_la_liga_features(df: pd.DataFrame) -> pd.DataFrame:
+def calculate_bundesliga_features(df: pd.DataFrame) -> pd.DataFrame:
     """
     Vectorized feature engineering for historical match data.
     Uses shift(1) per team to prevent data leakage.
@@ -213,8 +213,8 @@ def calculate_la_liga_features(df: pd.DataFrame) -> pd.DataFrame:
 def _team_stats_for_upcoming(hist_df: pd.DataFrame, team: str) -> dict:
     """Current rolling stats for a team — used to build the upcoming fixtures feature vector."""
     _default = {
-        "goals_avg_l5":    LA_LIGA_AVG_HOME_GOALS,
-        "conceded_avg_l5": LA_LIGA_AVG_AWAY_GOALS,
+        "goals_avg_l5":    BUNDESLIGA_AVG_HOME_GOALS,
+        "conceded_avg_l5": BUNDESLIGA_AVG_AWAY_GOALS,
         "win_rate_l10":    0.33,
         "momentum_l3":     3.0,
         "rest_days":       7,
@@ -300,7 +300,7 @@ def load_or_train_model(
         return model, FEATURE_COLS, metrics
 
     # Train from scratch
-    df = calculate_la_liga_features(hist_df)
+    df = calculate_bundesliga_features(hist_df)
     df = df[df["FullTimeResult"].isin(RESULT_MAP)].copy()
     df["_target"] = df["FullTimeResult"].map(RESULT_MAP)
 
@@ -460,15 +460,15 @@ def color_risk_rows(row: pd.Series) -> list[str]:
     """Pandas Styler row-apply function — color-codes rows by risk category."""
     cat = str(row.get("Risk Category", ""))
     if "Low" in cat:
-        s = "background-color: rgba(46,204,113,0.15); color: #c8ffd4"
+        s = "background-color: rgba(20,184,166,0.18); color: #000000"
     elif "Moderate" in cat:
-        s = "background-color: rgba(243,156,18,0.15); color: #ffe8a1"
+        s = "background-color: rgba(99,102,241,0.18); color: #000000"
     elif "High" in cat:
-        s = "background-color: rgba(231,76,60,0.15); color: #ffc0bb"
+        s = "background-color: rgba(245,158,11,0.20); color: #000000"
     elif "Critical" in cat:
-        s = "background-color: rgba(192,57,43,0.25); color: #ffc0bb"
+        s = "background-color: rgba(15,23,42,0.18); color: #000000"
     else:
-        s = ""
+        s = "color: #000000"
     return [s] * len(row)
 
 
@@ -508,7 +508,7 @@ def generate_match_commentary(
 # ── Standings ─────────────────────────────────────────────────────────────
 
 @st.cache_data(ttl=3600)
-def compute_la_liga_standings(
+def compute_bundesliga_standings(
     df: pd.DataFrame,
     season_start: str = "2025-08-01",
 ) -> pd.DataFrame:

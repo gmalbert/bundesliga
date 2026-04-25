@@ -10,11 +10,11 @@ from utils import get_dataframe_height, load_historical_data
 HIST_PATH = "data_files/combined_historical_data.csv"
 
 st.title("📁 Raw Data")
-st.caption("Browse the full historical La Liga match dataset.")
+st.caption("Browse the full historical Bundesliga match dataset.")
 
 if not path.exists(HIST_PATH):
     st.warning(f"`{HIST_PATH}` not found.")
-    st.info("Run `python fetch_historical_csvs.py` to download 10 seasons of La Liga results.")
+    st.info("Run `python fetch_historical_csvs.py` to download 10 seasons of Bundesliga results.")
     st.stop()
 
 df = load_historical_data(HIST_PATH)
@@ -93,7 +93,7 @@ csv_bytes = df[display_cols].to_csv(index=False).encode("utf-8")
 st.download_button(
     label="📥 Download filtered data as CSV",
     data=csv_bytes,
-    file_name="la_liga_raw_data.csv",
+    file_name="bundesliga_raw_data.csv",
     mime="text/csv",
 )
 
@@ -109,7 +109,7 @@ with st.expander("📖 Data Dictionary"):
 | **HomeTeam / AwayTeam** | Canonical club names |
 | **HG / AG** | Full-time goals for home / away |
 | **FTR** | Full-time result: H = Home win · D = Draw · A = Away win |
-| **Season** | La Liga season (e.g. `2023-24`) |
+| **Season** | Bundesliga season (e.g. `2023-24`) |
 | **Home Gls L5** | Rolling 5-game avg goals scored (home team, previous matches) |
 | **Away Gls L5** | Rolling 5-game avg goals scored (away team) |
 | **Home Win% L10** | Rolling 10-game win rate (all venues) |

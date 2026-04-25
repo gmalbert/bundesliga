@@ -1,4 +1,4 @@
-"""Backtesting module for La Liga Linea.
+"""Backtesting module for Bet Bundesliga.
 
 Evaluates the ensemble model's historical prediction quality and simulated
 flat-stake betting ROI using Bet365 odds from historical data.
@@ -227,7 +227,7 @@ def backtest_model(
 # ── CLI ───────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Backtest La Liga Linea ensemble model")
+    parser = argparse.ArgumentParser(description="Backtest Bet Bundesliga ensemble model")
     parser.add_argument("--csv",    default="data_files/combined_historical_data.csv")
     parser.add_argument("--model",  default="models/ensemble_model.pkl")
     parser.add_argument("--output", default="models/backtest_results.json",

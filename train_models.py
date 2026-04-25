@@ -1,4 +1,4 @@
-"""Offline model training script for La Liga Linea.
+"""Offline model training script for Bet Bundesliga.
 
 Trains the ensemble classifier and computes Poisson team strengths,
 then saves artefacts to models/.
@@ -8,7 +8,7 @@ Outputs:
     models/metrics.json          — accuracy, F1, log-loss, set sizes
     models/poisson_strengths.csv — Poisson attack/defense multipliers
     models/best_hyperparams.json — best XGBoost params (only with --optimize)
-    models/nn_model.pt           — trained LaLigaNet weights (PyTorch)
+    models/nn_model.pt           — trained BundesligaNet weights (PyTorch)
     models/nn_scaler.pkl         — StandardScaler for NN features
 
 Usage:
@@ -168,14 +168,14 @@ def train_ensemble(
 def train_neural_network(
     csv_path: str = "data_files/combined_historical_data.csv",
 ) -> dict:
-    """Train LaLigaNet and save weights."""
+    """Train BundesligaNet and save weights."""
     from models.nn_predictor import TORCH_AVAILABLE, train_nn
 
     if not TORCH_AVAILABLE:
         print("  ⚠ PyTorch not installed — skipping neural network.")
         return {}
 
-    print("Training neural network (LaLigaNet)…")
+    print("Training neural network (BundesligaNet)…")
     X_train, X_test, y_train, y_test = _load_training_arrays(csv_path)
     return train_nn(X_train, y_train, X_test, y_test)
 
@@ -207,7 +207,7 @@ def main(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Train La Liga Linea models")
+    parser = argparse.ArgumentParser(description="Train Bet Bundesliga models")
     parser.add_argument(
         "--csv",
         default="data_files/combined_historical_data.csv",

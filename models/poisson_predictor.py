@@ -1,4 +1,4 @@
-"""Dixon-Coles Poisson model for La Liga goal and scoreline prediction.
+"""Dixon-Coles Poisson model for Bundesliga goal and scoreline prediction.
 
 Provides:
     compute_team_strengths(df)  → DataFrame of attack/defense multipliers
@@ -15,8 +15,8 @@ import numpy as np
 import pandas as pd
 from scipy.stats import poisson
 
-LA_LIGA_AVG_HOME_GOALS = 1.45
-LA_LIGA_AVG_AWAY_GOALS = 1.12
+BUNDESLIGA_AVG_HOME_GOALS = 1.70
+BUNDESLIGA_AVG_AWAY_GOALS = 1.35
 
 
 def compute_team_strengths(df: pd.DataFrame) -> pd.DataFrame:
@@ -31,8 +31,8 @@ def compute_team_strengths(df: pd.DataFrame) -> pd.DataFrame:
     df["FullTimeHomeGoals"] = pd.to_numeric(df.get("FullTimeHomeGoals"), errors="coerce").fillna(0)
     df["FullTimeAwayGoals"] = pd.to_numeric(df.get("FullTimeAwayGoals"), errors="coerce").fillna(0)
 
-    league_home_avg = df["FullTimeHomeGoals"].mean() or LA_LIGA_AVG_HOME_GOALS
-    league_away_avg = df["FullTimeAwayGoals"].mean() or LA_LIGA_AVG_AWAY_GOALS
+    league_home_avg = df["FullTimeHomeGoals"].mean() or BUNDESLIGA_AVG_HOME_GOALS
+    league_away_avg = df["FullTimeAwayGoals"].mean() or BUNDESLIGA_AVG_AWAY_GOALS
 
     records = []
     all_teams = set(df["HomeTeam"].dropna()) | set(df["AwayTeam"].dropna())
@@ -80,13 +80,13 @@ def predict_match_poisson(
     away_row = strengths[strengths["Team"] == away_team]
 
     if home_row.empty or away_row.empty:
-        exp_home = LA_LIGA_AVG_HOME_GOALS
-        exp_away = LA_LIGA_AVG_AWAY_GOALS
+        exp_home = BUNDESLIGA_AVG_HOME_GOALS
+        exp_away = BUNDESLIGA_AVG_AWAY_GOALS
     else:
         h = home_row.iloc[0]
         a = away_row.iloc[0]
-        exp_home = h["HomeAttack"] * a["AwayDefense"] * LA_LIGA_AVG_HOME_GOALS
-        exp_away = a["AwayAttack"] * h["HomeDefense"] * LA_LIGA_AVG_AWAY_GOALS
+        exp_home = h["HomeAttack"] * a["AwayDefense"] * BUNDESLIGA_AVG_HOME_GOALS
+        exp_away = a["AwayAttack"] * h["HomeDefense"] * BUNDESLIGA_AVG_AWAY_GOALS
 
     # Build scoreline probability matrix
     home_pmf = poisson.pmf(range(max_goals + 1), exp_home)

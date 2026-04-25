@@ -1,15 +1,15 @@
-"""Fetch Copa del Rey fixtures from the ESPN unofficial API.
+"""Fetch DFB-Pokal fixtures from the ESPN unofficial API.
 
 Saves: data_files/raw/copa_fixtures.csv
        Columns: MatchDate (datetime), TeamName (str)
        One row per team per match (long format), used to compute
-       the Copa congestion flag in prepare_model_data.py.
+       the DFB-Pokal congestion flag in prepare_model_data.py.
 
 Usage:
     python fetch_copa_fixtures.py [season_start_year]
 
     season_start_year defaults to the current or most recent season.
-    e.g. 2024 → fetches the 2024-25 Copa del Rey.
+    e.g. 2024 → fetches the 2024-25 DFB-Pokal.
 
 No API key required.
 """
@@ -24,23 +24,23 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-# ESPN Copa del Rey league slug
-COPA_SLUG = "esp.copa_del_rey"
+# ESPN DFB-Pokal league slug
+COPA_SLUG = "ger.dfb_pokal"
 ESPN_BASE = "https://site.api.espn.com/apis/site/v2/sports/soccer"
 
 Path("data_files/raw").mkdir(parents=True, exist_ok=True)
 
 
 def _current_season_year() -> int:
-    """Return the start year of the current/most-recent Copa season."""
+    """Return the start year of the current/most-recent DFB-Pokal season."""
     now = datetime.now()
-    # Copa starts in August; if before August treat previous year as start
+    # DFB-Pokal starts in August; if before August treat previous year as start
     return now.year if now.month >= 8 else now.year - 1
 
 
 def fetch_copa_month(year: int, month: int) -> list[dict]:
     """
-    Fetch all Copa del Rey events for a single calendar month.
+    Fetch all DFB-Pokal events for a single calendar month.
     ESPN scoreboard accepts ?dates=YYYYMM to return a full month.
     """
     date_str = f"{year}{month:02d}"
@@ -81,16 +81,16 @@ def _parse_event(event: dict) -> tuple[str, str, str] | None:
 
 def fetch_copa_fixtures(season_start_year: int | None = None) -> pd.DataFrame:
     """
-    Fetch all Copa del Rey fixtures for a full season (Aug → Jun).
+    Fetch all DFB-Pokal fixtures for a full season (Aug → Jun).
     Returns a long-format DataFrame: one row per team per match.
     """
     if season_start_year is None:
         season_start_year = _current_season_year()
 
     season_label = f"{season_start_year}-{str(season_start_year + 1)[2:]}"
-    print(f"Fetching Copa del Rey {season_label} via ESPN…")
+    print(f"Fetching DFB-Pokal {season_label} via ESPN…")
 
-    # Copa season spans August → June
+    # DFB-Pokal season spans August → June
     months = (
         [(season_start_year, m) for m in range(8, 13)]
         + [(season_start_year + 1, m) for m in range(1, 7)]
@@ -108,7 +108,7 @@ def fetch_copa_fixtures(season_start_year: int | None = None) -> pd.DataFrame:
 
     if not match_rows:
         print(
-            "  ✗ No Copa fixtures found. ESPN may use a different slug for this season.\n"
+            "  ✗ No DFB-Pokal fixtures found. ESPN may use a different slug for this season.\n"
             f"  Tried slug: {COPA_SLUG}\n"
             "  Check https://www.espn.com/soccer/ for the correct league URL."
         )
@@ -129,7 +129,7 @@ def fetch_copa_fixtures(season_start_year: int | None = None) -> pd.DataFrame:
 
     out = "data_files/raw/copa_fixtures.csv"
     copa_long.to_csv(out, index=False)
-    print(f"  ✓ {len(df)} Copa matches → {len(copa_long)} team-match rows → {out}")
+    print(f"  ✓ {len(df)} DFB-Pokal matches → {len(copa_long)} team-match rows → {out}")
     return copa_long
 
 

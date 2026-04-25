@@ -1,10 +1,10 @@
-"""Neural network predictor for La Liga Linea.
+"""Neural network predictor for Bet Bundesliga.
 
 3-layer fully connected network with batch normalisation and dropout,
 trained on the same FEATURE_COLS as the ensemble model.
 
 Outputs:
-    models/nn_model.pt      — trained LaLigaNet weights
+    models/nn_model.pt      — trained BundesligaNet weights
     models/nn_scaler.pkl    — fitted StandardScaler
 
 Usage (called from train_models.py):
@@ -36,7 +36,7 @@ except ImportError:
 # ── Architecture ───────────────────────────────────────────────────────────
 
 if TORCH_AVAILABLE:
-    class LaLigaNet(nn.Module):
+    class BundesligaNet(nn.Module):
         """3-layer fully connected network for 3-class match outcome prediction."""
 
         def __init__(self, input_dim: int, dropout: float = 0.3):
@@ -72,7 +72,7 @@ def train_nn(
     model_path: str = "models/nn_model.pt",
     scaler_path: str = "models/nn_scaler.pkl",
 ) -> dict:
-    """Train LaLigaNet, save weights + scaler, return test metrics.
+    """Train BundesligaNet, save weights + scaler, return test metrics.
 
     Returns
     -------
@@ -104,7 +104,7 @@ def train_nn(
     loader  = DataLoader(dataset, batch_size=batch_size, shuffle=True, drop_last=False)
 
     input_dim = X_train.shape[1]
-    model = LaLigaNet(input_dim).to(device)
+    model = BundesligaNet(input_dim).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-4)
     scheduler = torch.optim.lr_scheduler.OneCycleLR(
         optimizer, max_lr=lr * 10, steps_per_epoch=max(1, len(loader)), epochs=epochs
@@ -150,8 +150,8 @@ def train_nn(
 def load_nn(
     model_path: str = "models/nn_model.pt",
     scaler_path: str = "models/nn_scaler.pkl",
-) -> Tuple["LaLigaNet", "StandardScaler"] | Tuple[None, None]:
-    """Load a saved LaLigaNet and its scaler. Returns (None, None) if unavailable."""
+) -> Tuple["BundesligaNet", "StandardScaler"] | Tuple[None, None]:
+    """Load a saved BundesligaNet and its scaler. Returns (None, None) if unavailable."""
     if not TORCH_AVAILABLE:
         return None, None
     if not Path(model_path).exists() or not Path(scaler_path).exists():
@@ -162,7 +162,7 @@ def load_nn(
 
     ckpt = torch.load(model_path, map_location="cpu", weights_only=True)
     input_dim = ckpt["input_dim"]
-    net = LaLigaNet(input_dim)
+    net = BundesligaNet(input_dim)
     net.load_state_dict(ckpt["state_dict"])
     net.eval()
     return net, scaler
@@ -170,7 +170,7 @@ def load_nn(
 
 def predict_nn(
     X: np.ndarray,
-    model: "LaLigaNet",
+    model: "BundesligaNet",
     scaler: "StandardScaler",
 ) -> np.ndarray:
     """Return probability matrix shape (n_samples, 3) — [P(Away), P(Draw), P(Home)]."""

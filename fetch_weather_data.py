@@ -1,4 +1,4 @@
-"""Fetch weather data for upcoming La Liga fixtures.
+"""Fetch weather data for upcoming Bundesliga fixtures.
 
 Uses the Open-Meteo API (free, no API key required).
 For each upcoming fixture, looks up the stadium coordinates and fetches
@@ -22,35 +22,33 @@ import pandas as pd
 import requests
 
 # ── Stadium Coordinates ────────────────────────────────────────────────────
-# (latitude, longitude) for each La Liga club's home stadium
+# (latitude, longitude) for each Bundesliga club's home stadium
 STADIUM_COORDS: dict[str, tuple[float, float]] = {
-    "Alaves":         (42.8466,  -2.6838),   # Mendizorrotza
-    "Almeria":        (36.8376,  -2.4593),   # Power Horse Stadium
-    "Ath Bilbao":     (43.2644,  -2.9494),   # San Mamés
-    "Ath Madrid":     (40.4361,  -3.5995),   # Estadio Metropolitano
-    "Atletico":       (40.4361,  -3.5995),   # alias
-    "Barcelona":      (41.3809,   2.1228),   # Spotify Camp Nou (Estadi Olímpic during works)
-    "Betis":          (37.3564,  -5.9823),   # Estadio Benito Villamarín
-    "Cadiz":          (36.5303,  -6.2970),   # Estadio Ramón de Carranza
-    "Celta":          (42.2116,  -8.7392),   # Abanca-Balaídos
-    "Espanol":        (41.3471,   2.0751),   # RCDE Stadium
-    "Getafe":         (40.3257,  -3.7184),   # Coliseum Alfonso Pérez
-    "Girona":         (41.9649,   2.8250),   # Estadi Montilivi
-    "Granada":        (37.1524,  -3.6075),   # Estadio Nuevo Los Cármenes
-    "Las Palmas":     (28.1000, -15.4200),   # Gran Canaria Stadium
-    "Leganes":        (40.3570,  -3.7694),   # Estadio Municipal de Butarque
-    "Mallorca":       (39.5896,   2.6537),   # Visit Mallorca Estadi
-    "Osasuna":        (42.7969,  -1.6370),   # El Sadar
-    "Oviedo":         (43.3532,  -5.8615),   # Carlos Tartiere
-    "Rayo Vallecano": (40.3914,  -3.6540),   # Estadio de Vallecas
-    "Rayo":           (40.3914,  -3.6540),   # alias
-    "Real Madrid":    (40.4531,  -3.6883),   # Santiago Bernabéu
-    "Sevilla":        (37.3840,  -5.9706),   # Ramón Sánchez-Pizjuán
-    "Sociedad":       (43.2998,  -1.9735),   # Reale Arena
-    "Vallecano":      (40.3914,  -3.6540),   # alias
-    "Valencia":       (39.4748,  -0.3584),   # Estadio Mestalla
-    "Valladolid":     (41.6408,  -4.7420),   # Nuevo Estadio José Zorrilla
-    "Villarreal":     (39.9445,  -0.1034),   # Estadio de la Cerámica
+    "Bayern Munich":  (48.2188,  11.6247),   # Allianz Arena
+    "Dortmund":       (51.4926,   7.4518),   # Signal Iduna Park
+    "Leverkusen":     (51.0383,   7.0023),   # BayArena
+    "RB Leipzig":     (51.3455,  12.3484),   # Red Bull Arena
+    "Ein Frankfurt":  (50.0687,   8.6454),   # Deutsche Bank Park
+    "Wolfsburg":      (52.4327,  10.8027),   # Volkswagen Arena
+    "M'gladbach":     (51.1743,   6.3852),   # Borussia-Park
+    "Hoffenheim":     (49.2384,   8.8883),   # PreZero Arena
+    "Freiburg":       (47.9875,   7.8943),   # Europa-Park Stadion
+    "Union Berlin":   (52.4573,  13.5672),   # An der Alten Försterei
+    "Stuttgart":      (48.7924,   9.2320),   # MHPArena
+    "Augsburg":       (48.3237,  10.8864),   # WWK Arena
+    "Mainz":          (49.9845,   8.2249),   # Mewa Arena
+    "Werder Bremen":  (53.0664,   8.8377),   # Wohninvest Weserstadion
+    "FC Koln":        (50.9333,   6.8750),   # RheinEnergieStadion
+    "Hertha":         (52.5145,  13.2394),   # Olympiastadion Berlin
+    "Hamburg":        (53.5872,   9.8980),   # Volksparkstadion
+    "Schalke 04":     (51.5541,   7.0677),   # Veltins-Arena
+    "Bochum":         (51.4906,   7.2148),   # Vonovia Ruhrstadion
+    "Heidenheim":     (48.6764,  10.1469),   # Voith-Arena
+    "Darmstadt":      (49.8640,   8.6490),   # Merck-Stadion
+    "St Pauli":       (53.5560,   9.9682),   # Millerntor-Stadion
+    "Holstein Kiel":  (54.3384,  10.1318),   # Holstein-Stadion
+    "Greuther Furth": (49.4766,  10.9897),   # Sportpark Ronhof
+    "Ingolstadt":     (48.7744,  11.4333),   # Audi Sportpark
 }
 
 # ── Helpers ────────────────────────────────────────────────────────────────

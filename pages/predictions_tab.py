@@ -1,4 +1,4 @@
-"""Predictions tab — default home page for La Liga Linea."""
+"""Predictions tab — default home page for Bet Bundesliga."""
 
 import json
 import warnings
@@ -24,7 +24,7 @@ PRED_LOG_PATH = "data_files/predictions_log.csv"
 FIXTURES_PATH = "data_files/upcoming_fixtures.csv"
 METRICS_PATH  = "models/metrics.json"
 
-st.title("🎯 La Liga Predictions")
+st.title("🎯 Bundesliga Predictions")
 st.caption("Ensemble model: XGBoost · Random Forest · Gradient Boosting · Logistic Regression")
 
 # ── Load pre-generated predictions ────────────────────────────────────────
@@ -45,7 +45,7 @@ if preds_log.empty:
 available_models = sorted(preds_log["ModelVersion"].dropna().unique()) if "ModelVersion" in preds_log.columns else ["ensemble_v1"]
 model_labels = {
     "ensemble_v1": "🤝 Ensemble (XGB + RF + GB + LR)",
-    "nn_v1":       "🧠 Neural Network (LaLigaNet)",
+    "nn_v1":       "🧠 Neural Network (BundesligaNet)",
 }
 if len(available_models) > 1:
     sel_model = st.selectbox(
@@ -218,7 +218,7 @@ with dl1:
     st.download_button(
         label="📥 Download CSV",
         data=csv_bytes,
-        file_name=f"la_liga_predictions_{datetime.now().strftime('%Y%m%d')}.csv",
+        file_name=f"bundesliga_predictions_{datetime.now().strftime('%Y%m%d')}.csv",
         mime="text/csv",
         use_container_width=True,
     )

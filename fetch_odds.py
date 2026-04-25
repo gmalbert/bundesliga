@@ -1,4 +1,4 @@
-"""Fetch La Liga betting odds from The Odds API.
+"""Fetch Bundesliga betting odds from The Odds API.
 
 Saves: data_files/raw/odds.csv
 
@@ -23,7 +23,7 @@ load_dotenv()
 
 ODDS_API_KEY  = os.getenv("ODDS_API_KEY", "")
 ODDS_API_BASE = "https://api.the-odds-api.com/v4"
-SPORT_KEY     = "soccer_spain_la_liga"
+SPORT_KEY     = "soccer_germany_bundesliga"
 
 OUT_PATH = "data_files/raw/odds.csv"
 
@@ -36,7 +36,7 @@ def fetch_upcoming_odds(
     bookmakers: str = "draftkings,betmgm,pinnacle,bet365",
 ) -> pd.DataFrame:
     """
-    Fetch upcoming La Liga 1X2 (h2h) odds.
+    Fetch upcoming Bundesliga 1X2 (h2h) odds.
     Returns a DataFrame with one row per game per bookmaker.
     """
     if not ODDS_API_KEY:

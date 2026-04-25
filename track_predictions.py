@@ -1,4 +1,4 @@
-"""Prediction logger and validator for La Liga Linea.
+"""Prediction logger and validator for Bet Bundesliga.
 
 Responsibilities:
   1. Log new predictions to data_files/predictions_log.csv
@@ -147,7 +147,7 @@ def print_validation_report(log_df: pd.DataFrame) -> None:
     acc     = correct / total
 
     print(f"\n{'='*50}")
-    print("  La Liga Linea — Prediction Accuracy Report")
+    print("  Bet Bundesliga — Prediction Accuracy Report")
     print(f"{'='*50}")
     print(f"  Total resolved:  {total}")
     print(f"  Correct:         {correct}  ({acc:.1%})")
@@ -193,7 +193,7 @@ def validate(hist_path: str = HIST_PATH) -> None:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Track and validate La Liga predictions")
+    parser = argparse.ArgumentParser(description="Track and validate Bundesliga predictions")
     parser.add_argument(
         "--validate",
         action="store_true",

@@ -1,4 +1,4 @@
-"""Fetch upcoming La Liga fixtures from football-data.org (competition PD).
+"""Fetch upcoming Bundesliga fixtures from football-data.org (competition BL1).
 
 Saves: data_files/upcoming_fixtures.csv
 
@@ -6,7 +6,7 @@ Usage:
     python fetch_upcoming_fixtures.py
 
 Requires:
-    FOOTBALL_DATA_KEY in .env (free tier covers PD at 10 req/min)
+    FOOTBALL_DATA_KEY in .env (free tier covers BL1 at 10 req/min)
 """
 
 from __future__ import annotations
@@ -29,9 +29,9 @@ HEADERS = {"X-Auth-Token": FOOTBALL_DATA_KEY}
 OUT_PATH = "data_files/upcoming_fixtures.csv"
 
 
-def fetch_upcoming_pd_fixtures(season: int | None = None) -> pd.DataFrame:
+def fetch_upcoming_bl1_fixtures(season: int | None = None) -> pd.DataFrame:
     """
-    Fetch SCHEDULED La Liga matches from football-data.org.
+    Fetch SCHEDULED Bundesliga matches from football-data.org.
     Returns a DataFrame and saves to upcoming_fixtures.csv.
     """
     if not FOOTBALL_DATA_KEY:
@@ -44,7 +44,7 @@ def fetch_upcoming_pd_fixtures(season: int | None = None) -> pd.DataFrame:
         params["season"] = season
 
     resp = requests.get(
-        f"{BASE_URL}/competitions/PD/matches",
+        f"{BASE_URL}/competitions/BL1/matches",
         headers=HEADERS,
         params=params,
         timeout=15,
@@ -81,13 +81,13 @@ def fetch_upcoming_pd_fixtures(season: int | None = None) -> pd.DataFrame:
 
 def fetch_recent_results(n_matchdays: int = 3) -> pd.DataFrame:
     """
-    Fetch the most recently FINISHED La Liga matches (for predictions log enrichment).
+    Fetch the most recently FINISHED Bundesliga matches (for predictions log enrichment).
     """
     if not FOOTBALL_DATA_KEY:
         return pd.DataFrame()
 
     resp = requests.get(
-        f"{BASE_URL}/competitions/PD/matches",
+        f"{BASE_URL}/competitions/BL1/matches",
         headers=HEADERS,
         params={"status": "FINISHED"},
         timeout=15,
@@ -125,4 +125,4 @@ def fetch_recent_results(n_matchdays: int = 3) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    fetch_upcoming_pd_fixtures()
+    fetch_upcoming_bl1_fixtures()

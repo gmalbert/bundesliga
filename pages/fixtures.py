@@ -7,7 +7,7 @@ import pandas as pd
 import streamlit as st
 
 from utils import (
-    compute_la_liga_standings,
+    compute_bundesliga_standings,
     compute_league_stats,
     get_dataframe_height,
     load_historical_data,
@@ -25,7 +25,7 @@ st.title("🗓️ Fixtures & Standings")
 season_year = int(st.session_state.get("selected_season", "2025-26").split("-")[0]) + 1
 stats = compute_league_stats(HIST_PATH, season_year)
 if stats and stats["n"] > 0:
-    with st.expander(f"📈 La Liga {season_year - 1}-{str(season_year)[2:]} Stats — {stats['n']} matches played", expanded=False):
+    with st.expander(f"📈 Bundesliga {season_year - 1}-{str(season_year)[2:]} Stats — {stats['n']} matches played", expanded=False):
         s1, s2, s3, s4, s5, s6 = st.columns(6)
         s1.metric("Home Win %",   f"{stats['home_win_pct']:.0%}")
         s2.metric("Draw %",       f"{stats['draw_pct']:.0%}")
@@ -40,10 +40,10 @@ if stats and stats["n"] > 0:
 if path.exists(HIST_PATH):
     hist_df = load_historical_data(HIST_PATH)
     season_start = f"{season_year - 1}-08-01"
-    standings = compute_la_liga_standings(hist_df, season_start=season_start)
+    standings = compute_bundesliga_standings(hist_df, season_start=season_start)
 
     if not standings.empty:
-        st.subheader(f"📊 La Liga Table — {season_year - 1}-{str(season_year)[2:]}")
+        st.subheader(f"📊 Bundesliga Table — {season_year - 1}-{str(season_year)[2:]}")
         st.dataframe(standings, hide_index=True, use_container_width=True,
                      height=get_dataframe_height(standings, max_height=760))
         st.divider()
@@ -54,7 +54,7 @@ else:
 
 
 # ── Upcoming fixtures ──────────────────────────────────────────────────────
-st.subheader("🗓️ Upcoming La Liga Fixtures")
+st.subheader("🗓️ Upcoming Bundesliga Fixtures")
 st.caption("*Times in Eastern Time (ET)*")
 
 if not path.exists(FIXTURES_PATH):
@@ -102,7 +102,7 @@ for _, fix in upcoming.iterrows():
         c1.markdown(f"### 🏠 {home}")
         c2.markdown("### VS")
         c3.markdown(f"### ✈️ {away}")
-        st.caption(f"Matchday {mday} · 🌱 Natural Grass · 🇪🇸 La Liga")
+        st.caption(f"Matchday {mday} · 🌱 Natural Grass · �🇪 Bundesliga")
 
         # Weather info
         if weather_df is not None:

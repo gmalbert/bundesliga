@@ -1,4 +1,4 @@
-"""Ensemble model definition for La Liga Linea.
+"""Ensemble model definition for Bet Bundesliga.
 
 Provides create_ensemble_model() — a soft-voting VotingClassifier with
 XGBoost, Random Forest, Gradient Boosting, and Logistic Regression.

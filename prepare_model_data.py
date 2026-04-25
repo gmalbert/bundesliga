@@ -1,4 +1,4 @@
-"""Feature engineering pipeline for La Liga Linea — offline / standalone use.
+"""Feature engineering pipeline for Bet Bundesliga — offline / standalone use.
 
 This module is imported by train_models.py and the nightly pipeline.
 It deliberately does NOT import streamlit so it runs cleanly in CI / GitHub Actions.
@@ -23,8 +23,8 @@ import pandas as pd
 
 # ── Constants (must stay in sync with utils.py) ───────────────────────────
 
-LA_LIGA_AVG_HOME_GOALS = 1.45
-LA_LIGA_AVG_AWAY_GOALS = 1.12
+BUNDESLIGA_AVG_HOME_GOALS = 1.70
+BUNDESLIGA_AVG_AWAY_GOALS = 1.35
 
 FEATURE_COLS: list[str] = [
     "HomeGoals_Avg_L5",
@@ -42,7 +42,7 @@ FEATURE_COLS: list[str] = [
     "ImpliedProb_AwayWin",
 ]
 
-COPA_CONGESTION_WINDOW_DAYS = 4  # flag = 1 if team played Copa ≤ 4 days before
+COPA_CONGESTION_WINDOW_DAYS = 4  # flag = 1 if team played DFB-Pokal ≤ 4 days before
 
 
 # ── Core Feature Engineering ──────────────────────────────────────────────
@@ -215,15 +215,15 @@ def load_and_engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     df = _implied_probability_features(df)
     df = _copa_congestion_features(df)
 
-    # Fill any remaining NaN in feature columns with La Liga averages / sensible defaults
+    # Fill any remaining NaN in feature columns with Bundesliga averages / sensible defaults
     fill_values = {
-        "HomeGoals_Avg_L5":    LA_LIGA_AVG_HOME_GOALS,
-        "HomeConceded_Avg_L5": LA_LIGA_AVG_AWAY_GOALS,
+        "HomeGoals_Avg_L5":    BUNDESLIGA_AVG_HOME_GOALS,
+        "HomeConceded_Avg_L5": BUNDESLIGA_AVG_AWAY_GOALS,
         "HomeWinRate_L10":     0.33,
         "HomeMomentum_L3":     3.0,
         "HomeRestDays":        7.0,
-        "AwayGoals_Avg_L5":    LA_LIGA_AVG_AWAY_GOALS,
-        "AwayConceded_Avg_L5": LA_LIGA_AVG_HOME_GOALS,
+        "AwayGoals_Avg_L5":    BUNDESLIGA_AVG_AWAY_GOALS,
+        "AwayConceded_Avg_L5": BUNDESLIGA_AVG_HOME_GOALS,
         "AwayWinRate_L10":     0.33,
         "AwayMomentum_L3":     3.0,
         "AwayRestDays":        7.0,

@@ -1,4 +1,4 @@
-"""Nightly pipeline orchestrator for La Liga Linea.
+"""Nightly pipeline orchestrator for Bet Bundesliga.
 
 Runs all fetch, feature engineering, model training, and prediction
 pre-generation steps in order. Can be run locally or invoked from
@@ -27,7 +27,7 @@ STEPS: list[tuple[str, list[str], bool]] = [
     ("Fetch historical CSVs",       ["python", "fetch_historical_csvs.py"],   False),
     ("Fetch upcoming fixtures",     ["python", "fetch_upcoming_fixtures.py"], False),
     ("Fetch xG proxy",              ["python", "fetch_fbref_xg.py"],          False),
-    ("Fetch Copa fixtures",         ["python", "fetch_copa_fixtures.py"],     False),
+    ("Fetch DFB-Pokal fixtures",      ["python", "fetch_copa_fixtures.py"],     False),
     ("Fetch bookmaker odds",        ["python", "fetch_odds.py"],              True),
     ("Fetch weather forecasts",     ["python", "fetch_weather_data.py"],      False),
     ("Prepare model features",      ["python", "prepare_model_data.py"],      False),
@@ -40,7 +40,7 @@ STEPS: list[tuple[str, list[str], bool]] = [
 
 def run_pipeline(skip_odds: bool = False) -> None:
     print(f"\n{'='*60}")
-    print("La Liga Linea — Nightly Pipeline")
+    print("Bet Bundesliga — Nightly Pipeline")
     print(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     if skip_odds:
         print("⚠ Odds fetch skipped (--skip-odds)")
@@ -70,7 +70,7 @@ def run_pipeline(skip_odds: bool = False) -> None:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="La Liga nightly data pipeline")
+    parser = argparse.ArgumentParser(description="Bundesliga nightly data pipeline")
     parser.add_argument(
         "--skip-odds",
         action="store_true",

@@ -1,4 +1,4 @@
-"""Download SP1.csv files for every La Liga season from football-data.co.uk
+"""Download D1.csv files for every Bundesliga season from football-data.co.uk
 and merge them into data_files/combined_historical_data.csv.
 
 Usage:
@@ -29,7 +29,7 @@ SEASONS: dict[str, str] = {
     "2526": "2025-26",
 }
 
-BASE_URL = "https://www.football-data.co.uk/mmz4281/{code}/SP1.csv"
+BASE_URL = "https://www.football-data.co.uk/mmz4281/{code}/D1.csv"
 
 COLUMN_MAP: dict[str, str] = {
     "Date":   "MatchDate",
@@ -101,7 +101,7 @@ def build_historical_dataset() -> pd.DataFrame:
         print(f"Downloading {label}…")
         df = download_season(code, label)
         if not df.empty:
-            raw_path = f"data_files/raw/SP1_{code}.csv"
+            raw_path = f"data_files/raw/D1_{code}.csv"
             df.to_csv(raw_path, index=False)
             frames.append(df)
 

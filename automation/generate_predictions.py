@@ -5,7 +5,7 @@ so the Streamlit app never has to run the model at request time.
 
 Generates predictions from:
   1. Ensemble (VotingClassifier) → ModelVersion = "ensemble_v1"
-  2. Neural Network (LaLigaNet, if available) → ModelVersion = "nn_v1"
+  2. Neural Network (BundesligaNet, if available) → ModelVersion = "nn_v1"
 """
 
 from __future__ import annotations

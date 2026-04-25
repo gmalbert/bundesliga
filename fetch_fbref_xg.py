@@ -1,8 +1,8 @@
-"""Compute team-level xG proxy stats for La Liga Linea.
+"""Compute team-level xG proxy stats for Bet Bundesliga.
 
 Primary source: data_files/combined_historical_data.csv
     football-data.co.uk CSVs include shots on target (HST/AST) which are
-    used as a reliable xG proxy (La Liga SOT->goal conversion ~31pct).
+    used as a reliable xG proxy (Bundesliga SOT->goal conversion ~33pct).
 
 FBref is protected by Cloudflare JS challenge and cannot be scraped with
 standard HTTP libraries. Understat is fully client-side rendered. This
@@ -29,7 +29,7 @@ HIST_PATH    = "data_files/combined_historical_data.csv"
 TEAM_OUT     = "data_files/raw/fbref_team_xg.csv"
 MATCH_OUT    = "data_files/raw/fbref_match_xg.csv"
 
-SOT_XG_FACTOR = 0.31
+SOT_XG_FACTOR = 0.33
 
 Path("data_files/raw").mkdir(parents=True, exist_ok=True)
 

@@ -7,7 +7,7 @@ def add_betting_oracle_footer() -> None:
     st.markdown(
         """
         <div style='text-align:center;color:#888;font-size:0.78em;padding-bottom:8px;'>
-        <strong>La Liga Linea</strong> — part of the
+        <strong>Bet Bundesliga</strong> — part of the
         <strong>Betting Oracle</strong> suite ·
         Predictions are for informational purposes only ·
         Past performance does not guarantee future results ·

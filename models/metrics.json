@@ -1,9 +1,9 @@
 {
-  "accuracy": 0.5425,
-  "f1_macro": 0.4639,
-  "log_loss": 0.982,
-  "n_train": 3296,
-  "n_test": 824,
+  "accuracy": 0.5015,
+  "f1_macro": 0.4147,
+  "log_loss": 0.9925,
+  "n_train": 2664,
+  "n_test": 666,
   "feature_cols": [
     "HomeGoals_Avg_L5",
     "HomeConceded_Avg_L5",

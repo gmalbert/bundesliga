@@ -1,4 +1,4 @@
-"""Statistics page — xG rankings, team form, H2H, Copa del Rey congestion, feature importance."""
+"""Statistics page — xG rankings, team form, H2H, DFB-Pokal congestion, feature importance."""
 
 from __future__ import annotations
 import json
@@ -191,8 +191,8 @@ if st.button("🔍 Analyse H2H", use_container_width=False):
 st.divider()
 
 
-# ── Copa del Rey Congestion ────────────────────────────────────────────────
-st.subheader("🏆 Copa del Rey Congestion Flag")
+# ── DFB-Pokal Congestion ───────────────────────────────────────────────────────────
+st.subheader("🏆 DFB-Pokal Congestion Flag")
 copa_path = "data_files/raw/copa_fixtures.csv"
 if path.exists(copa_path):
     copa_df = pd.read_csv(copa_path)
@@ -201,10 +201,10 @@ if path.exists(copa_path):
         copa_df["MatchDate"] >= (pd.Timestamp.now() - pd.Timedelta(days=7))
     ]
     if recent_copa.empty:
-        st.success("No teams played Copa del Rey in the last 7 days.")
+        st.success("No teams played DFB-Pokal in the last 7 days.")
     else:
         flagged = recent_copa["TeamName"].nunique() if "TeamName" in recent_copa.columns else "?"
-        st.warning(f"⚠️ {flagged} team(s) played Copa del Rey in the last 7 days.")
+        st.warning(f"⚠️ {flagged} team(s) played DFB-Pokal in the last 7 days.")
         st.dataframe(recent_copa, hide_index=True, use_container_width=True)
 else:
-    st.info("Copa del Rey data not yet available — refreshed nightly.")
+    st.info("DFB-Pokal data not yet available — refreshed nightly.")
