@@ -1,0 +1,34 @@
+Date,HomeTeam,AwayTeam,Bookmaker,HomeWinOdds,DrawOdds,AwayWinOdds,ImpliedProb_HomeWin,ImpliedProb_Draw,ImpliedProb_AwayWin,BookmakerMargin
+2026-04-26,VfB Stuttgart,Werder Bremen,pinnacle,1.57,4.26,6.01,0.6136,0.2261,0.1603,3.81
+2026-04-26,VfB Stuttgart,Werder Bremen,draftkings,1.51,4.1,5.5,0.6087,0.2242,0.1671,8.8
+2026-04-26,VfB Stuttgart,Werder Bremen,betmgm,1.53,4.6,5.5,0.6208,0.2065,0.1727,5.28
+2026-04-26,Borussia Dortmund,SC Freiburg,pinnacle,1.39,5.25,7.79,0.6929,0.1835,0.1236,3.83
+2026-04-26,Borussia Dortmund,SC Freiburg,draftkings,1.36,4.9,7.0,0.6794,0.1886,0.132,8.22
+2026-04-26,Borussia Dortmund,SC Freiburg,betmgm,1.35,5.5,7.75,0.7044,0.1729,0.1227,5.16
+2026-05-02,Bayern Munich,1. FC Heidenheim,pinnacle,1.2,7.62,10.51,0.7864,0.1238,0.0898,5.97
+2026-05-02,Bayern Munich,1. FC Heidenheim,draftkings,1.19,7.0,9.0,0.7679,0.1305,0.1015,9.43
+2026-05-02,Bayern Munich,1. FC Heidenheim,betmgm,1.22,7.25,9.75,0.7732,0.1301,0.0967,6.02
+2026-05-02,Union Berlin,1. FC Köln,pinnacle,2.34,3.48,2.98,0.4069,0.2736,0.3195,5.03
+2026-05-02,Union Berlin,1. FC Köln,draftkings,2.25,3.3,2.85,0.4046,0.2759,0.3195,9.84
+2026-05-02,Union Berlin,1. FC Köln,betmgm,2.35,3.4,2.95,0.402,0.2778,0.3202,5.86
+2026-05-02,Werder Bremen,Augsburg,pinnacle,1.88,3.89,3.8,0.5056,0.2443,0.2501,5.21
+2026-05-02,Werder Bremen,Augsburg,draftkings,1.87,3.65,3.6,0.4922,0.2522,0.2557,8.65
+2026-05-02,Werder Bremen,Augsburg,betmgm,1.91,3.8,3.75,0.497,0.2498,0.2532,5.34
+2026-05-02,Eintracht Frankfurt,Hamburger SV,pinnacle,1.68,4.19,4.55,0.5649,0.2265,0.2086,5.37
+2026-05-02,Eintracht Frankfurt,Hamburger SV,draftkings,1.67,3.95,4.2,0.5493,0.2322,0.2184,9.01
+2026-05-02,Eintracht Frankfurt,Hamburger SV,betmgm,1.74,4.1,4.2,0.5439,0.2308,0.2253,5.67
+2026-05-02,TSG Hoffenheim,VfB Stuttgart,pinnacle,2.33,4.05,2.67,0.4085,0.235,0.3565,5.06
+2026-05-02,TSG Hoffenheim,VfB Stuttgart,draftkings,2.25,3.8,2.6,0.4069,0.2409,0.3521,9.22
+2026-05-02,TSG Hoffenheim,VfB Stuttgart,betmgm,2.35,3.9,2.65,0.4017,0.2421,0.3562,5.93
+2026-05-02,Bayer Leverkusen,RB Leipzig,pinnacle,2.02,4.04,3.25,0.4714,0.2357,0.293,5.03
+2026-05-02,Bayer Leverkusen,RB Leipzig,draftkings,1.95,3.85,3.05,0.466,0.236,0.2979,10.04
+2026-05-02,Bayer Leverkusen,RB Leipzig,betmgm,2.05,4.0,3.1,0.46,0.2358,0.3042,6.04
+2026-05-03,FC St. Pauli,FSV Mainz 05,pinnacle,2.68,3.3,2.69,0.3561,0.2892,0.3548,4.79
+2026-05-03,FC St. Pauli,FSV Mainz 05,draftkings,2.7,3.15,2.5,0.3405,0.2918,0.3677,8.78
+2026-05-03,FC St. Pauli,FSV Mainz 05,betmgm,2.75,3.25,2.6,0.3444,0.2914,0.3642,5.59
+2026-05-03,Borussia Monchengladbach,Borussia Dortmund,pinnacle,3.86,3.86,1.87,0.2461,0.2461,0.5079,5.29
+2026-05-03,Borussia Monchengladbach,Borussia Dortmund,draftkings,3.65,3.65,1.83,0.2503,0.2503,0.4993,9.44
+2026-05-03,Borussia Monchengladbach,Borussia Dortmund,betmgm,3.8,3.8,1.87,0.248,0.248,0.504,6.11
+2026-05-03,SC Freiburg,VfL Wolfsburg,pinnacle,2.3,3.66,2.92,0.4139,0.2601,0.326,5.05
+2026-05-03,SC Freiburg,VfL Wolfsburg,draftkings,2.2,3.5,2.85,0.4166,0.2619,0.3216,9.11
+2026-05-03,SC Freiburg,VfL Wolfsburg,betmgm,2.25,3.6,2.95,0.4188,0.2618,0.3194,6.12
