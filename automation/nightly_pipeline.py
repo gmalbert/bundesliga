@@ -24,15 +24,17 @@ sys.path.insert(0, str(ROOT))
 
 STEPS: list[tuple[str, list[str], bool]] = [
     # (label, command, requires_odds_api)
-    ("Fetch historical CSVs",     ["python", "fetch_historical_csvs.py"],   False),
-    ("Fetch upcoming fixtures",   ["python", "fetch_upcoming_fixtures.py"], False),
-    ("Fetch xG proxy",            ["python", "fetch_fbref_xg.py"],          False),
-    ("Fetch Copa fixtures",       ["python", "fetch_copa_fixtures.py"],     False),
-    ("Fetch bookmaker odds",      ["python", "fetch_odds.py"],              True),
-    ("Prepare model features",    ["python", "prepare_model_data.py"],      False),
-    ("Train models",              ["python", "train_models.py"],            False),
-    ("Pre-generate predictions",  ["python", "automation/generate_predictions.py"], False),
-    ("Validate prediction log",   ["python", "track_predictions.py", "--validate"], False),
+    ("Fetch historical CSVs",       ["python", "fetch_historical_csvs.py"],   False),
+    ("Fetch upcoming fixtures",     ["python", "fetch_upcoming_fixtures.py"], False),
+    ("Fetch xG proxy",              ["python", "fetch_fbref_xg.py"],          False),
+    ("Fetch Copa fixtures",         ["python", "fetch_copa_fixtures.py"],     False),
+    ("Fetch bookmaker odds",        ["python", "fetch_odds.py"],              True),
+    ("Fetch weather forecasts",     ["python", "fetch_weather_data.py"],      False),
+    ("Prepare model features",      ["python", "prepare_model_data.py"],      False),
+    ("Train models",                ["python", "train_models.py"],            False),
+    ("Run historical backtest",     ["python", "backtest.py"],                False),
+    ("Pre-generate predictions",    ["python", "automation/generate_predictions.py"], False),
+    ("Validate prediction log",     ["python", "track_predictions.py", "--validate"], False),
 ]
 
 

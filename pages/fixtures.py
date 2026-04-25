@@ -16,6 +16,7 @@ from utils import (
 
 HIST_PATH     = "data_files/combined_historical_data.csv"
 FIXTURES_PATH = "data_files/upcoming_fixtures.csv"
+WEATHER_PATH  = "data_files/raw/match_weather.csv"
 
 st.title("🗓️ Fixtures & Standings")
 
@@ -57,7 +58,7 @@ st.subheader("🗓️ Upcoming La Liga Fixtures")
 st.caption("*Times in Eastern Time (ET)*")
 
 if not path.exists(FIXTURES_PATH):
-    st.warning("No upcoming fixtures. Run `python fetch_upcoming_fixtures.py`.")
+    st.warning("No upcoming fixtures — data is refreshed nightly via GitHub Actions.")
     st.stop()
 
 upcoming = load_upcoming_fixtures(FIXTURES_PATH)
@@ -69,10 +70,30 @@ st.caption(
     f"Last updated: {datetime.fromtimestamp(path.getmtime(FIXTURES_PATH)).strftime('%Y-%m-%d %H:%M')}"
 )
 
+# Load weather if available
+weather_df: pd.DataFrame | None = None
+if path.exists(WEATHER_PATH):
+    try:
+        weather_df = pd.read_csv(WEATHER_PATH)
+        weather_df["Date"] = weather_df["Date"].astype(str).str[:10]
+    except Exception:
+        weather_df = None
+
+# ── Weather icons map ──────────────────────────────────────────────────────
+WEATHER_ICONS = {
+    "Clear":        "☀️",
+    "Partly cloudy":"⛅",
+    "Foggy":        "🌫️",
+    "Rainy":        "🌧️",
+    "Snowy":        "❄️",
+    "Showers":      "🌦️",
+    "Thunderstorm": "⛈️",
+}
+
 for _, fix in upcoming.iterrows():
     home = str(fix.get("HomeTeam", "?"))
     away = str(fix.get("AwayTeam", "?"))
-    date = str(fix.get("Date", ""))
+    date = str(fix.get("Date", ""))[:10]
     time = str(fix.get("Time", ""))
     mday = fix.get("Matchday", "—")
     label = f"**{home}** vs **{away}**  —  {date}  {time}"
@@ -82,3 +103,24 @@ for _, fix in upcoming.iterrows():
         c2.markdown("### VS")
         c3.markdown(f"### ✈️ {away}")
         st.caption(f"Matchday {mday} · 🌱 Natural Grass · 🇪🇸 La Liga")
+
+        # Weather info
+        if weather_df is not None:
+            w_row = weather_df[
+                (weather_df["HomeTeam"] == home) & (weather_df["Date"] == date)
+            ]
+            if not w_row.empty:
+                w = w_row.iloc[0]
+                desc  = str(w.get("WeatherDesc", "N/A"))
+                icon  = WEATHER_ICONS.get(desc, "🌡️")
+                temp  = w.get("TempMaxC")
+                rain  = w.get("PrecipMM")
+                wind  = w.get("WindKmh")
+                parts = [f"{icon} {desc}"]
+                if temp is not None:
+                    parts.append(f"🌡️ {temp:.0f}°C")
+                if rain is not None:
+                    parts.append(f"💧 {rain:.1f} mm")
+                if wind is not None:
+                    parts.append(f"💨 {wind:.0f} km/h")
+                st.caption("  ·  ".join(parts))
