@@ -408,6 +408,7 @@ def predict_for_upcoming(
             "_ph": p_home,
             "_pd": p_draw,
             "_pa": p_away,
+            **feat_vec,
         })
 
     return pd.DataFrame(rows)
