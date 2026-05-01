@@ -75,6 +75,13 @@ jobs:
       - name: Validate prediction log
         run: python track_predictions.py --validate
 
+      # ── Export best bets for Sports Picks Grid aggregator ───────────────
+      - name: Export best bets for Sports Picks Grid
+        run: python scripts/export_best_bets.py
+        continue-on-error: true
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+
       - name: Commit updated data, models, and predictions
         run: |
           git config user.name  "github-actions[bot]"
