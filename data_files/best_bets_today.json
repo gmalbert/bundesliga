@@ -1,25 +1,10 @@
 {
   "meta": {
     "sport": "Bundesliga",
-    "generated_at": "2026-04-30T02:04:48.622443+00:00",
+    "generated_at": "2026-05-02T07:38:02.540800+00:00",
     "model_version": "1.0.0",
-    "season": "2026"
+    "season": "2026",
+    "notes": "No qualifying Bundesliga picks for 2026-05-02"
   },
-  "bets": [
-    {
-      "game_date": "2026-04-29",
-      "game_time": null,
-      "game": "Chelsea @ Arsenal",
-      "home_team": "Arsenal",
-      "away_team": "Chelsea",
-      "bet_type": "Match Result",
-      "pick": "Home Win",
-      "confidence": 0.58,
-      "edge": 0.1038,
-      "tier": "Elite",
-      "odds": 110,
-      "line": null,
-      "league": "Bundesliga"
-    }
-  ]
+  "bets": []
 }

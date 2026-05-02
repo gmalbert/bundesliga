@@ -1,0 +1,28 @@
+LoggedAt,MatchDate,HomeTeam,AwayTeam,PredHomeWin,PredDraw,PredAwayWin,PredictedResult,ActualResult,Correct,ModelVersion
+2026-05-02 07:38:00,2026-05-02,TSG 1899 Hoffenheim,VfB Stuttgart,24.5,34.5,41.0,A,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-02,SV Werder Bremen,FC Augsburg,45.9,30.1,24.0,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-02,FC Bayern München,1. FC Heidenheim 1846,54.3,17.6,28.1,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-02,1. FC Union Berlin,1. FC Köln,26.8,27.6,45.6,A,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-02,Eintracht Frankfurt,Hamburger SV,50.7,30.6,18.7,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-02,Bayer 04 Leverkusen,RB Leipzig,37.3,20.7,42.0,A,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-03,FC St. Pauli 1910,1. FSV Mainz 05,41.1,22.6,36.3,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-03,Borussia Mönchengladbach,Borussia Dortmund,31.9,39.1,29.0,D,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-03,SC Freiburg,VfL Wolfsburg,60.2,20.5,19.2,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-08,Borussia Dortmund,Eintracht Frankfurt,43.0,32.8,24.2,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-09,VfB Stuttgart,Bayer 04 Leverkusen,27.7,28.2,44.0,A,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-09,TSG 1899 Hoffenheim,SV Werder Bremen,33.6,43.3,23.2,D,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-09,FC Augsburg,Borussia Mönchengladbach,53.3,24.3,22.3,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-09,RB Leipzig,FC St. Pauli 1910,64.1,16.2,19.7,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-09,VfL Wolfsburg,FC Bayern München,15.4,22.2,62.4,A,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-10,Hamburger SV,SC Freiburg,29.4,42.7,27.9,D,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-10,1. FC Köln,1. FC Heidenheim 1846,24.5,19.8,55.7,A,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-10,1. FSV Mainz 05,1. FC Union Berlin,46.5,36.9,16.5,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-16,SV Werder Bremen,Borussia Dortmund,41.3,34.0,24.7,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-16,1. FC Heidenheim 1846,1. FSV Mainz 05,43.6,21.8,34.7,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-16,SC Freiburg,RB Leipzig,33.5,30.2,36.3,A,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-16,Eintracht Frankfurt,VfB Stuttgart,26.2,34.1,39.8,A,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-16,FC St. Pauli 1910,VfL Wolfsburg,50.5,18.1,31.4,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-16,1. FC Union Berlin,FC Augsburg,29.2,43.8,27.0,D,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-16,Borussia Mönchengladbach,TSG 1899 Hoffenheim,44.5,28.3,27.2,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-16,FC Bayern München,1. FC Köln,62.3,14.1,23.5,H,,,ensemble_v1
+2026-05-02 07:38:00,2026-05-16,Bayer 04 Leverkusen,Hamburger SV,64.0,16.4,19.6,H,,,ensemble_v1
