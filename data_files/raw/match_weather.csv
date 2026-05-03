@@ -1,10 +1,4 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-05-02,TSG 1899 Hoffenheim,N/A,,,
-2026-05-02,SV Werder Bremen,N/A,,,
-2026-05-02,FC Bayern München,N/A,,,
-2026-05-02,1. FC Union Berlin,N/A,,,
-2026-05-02,Eintracht Frankfurt,N/A,,,
-2026-05-02,Bayer 04 Leverkusen,N/A,,,
 2026-05-03,FC St. Pauli 1910,N/A,,,
 2026-05-03,Borussia Mönchengladbach,N/A,,,
 2026-05-03,SC Freiburg,N/A,,,
@@ -12,7 +6,7 @@ Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
 2026-05-09,VfB Stuttgart,N/A,,,
 2026-05-09,TSG 1899 Hoffenheim,N/A,,,
 2026-05-09,FC Augsburg,N/A,,,
-2026-05-09,RB Leipzig,Rainy,20.7,4.2,17.6
+2026-05-09,RB Leipzig,Partly cloudy,18.5,0.0,14.8
 2026-05-09,VfL Wolfsburg,N/A,,,
 2026-05-10,Hamburger SV,N/A,,,
 2026-05-10,1. FC Köln,N/A,,,
