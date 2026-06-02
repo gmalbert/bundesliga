@@ -120,4 +120,4 @@ styled = recent[show_cols].rename(columns={
     "FullTimeAwayGoals": "AG", "FullTimeResult": "FTR",
 }).style.map(_outcome_style, subset=["Outcome"])
 
-st.dataframe(styled, hide_index=True, use_container_width=True)
+st.dataframe(styled, hide_index=True, width='stretch')

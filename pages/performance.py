@@ -77,7 +77,7 @@ else:
                       annotation_text="Random baseline (33.3%)")
         fig.update_traces(line_color="#e63946", line_width=2)
         fig.update_layout(yaxis_range=[0, 100], hovermode="x unified")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
     st.divider()
 
@@ -105,7 +105,7 @@ else:
             "PredAwayWin": "{:.1%}",
         }, na_rep="—")
     )
-    st.dataframe(styled, hide_index=True, use_container_width=True)
+    st.dataframe(styled, hide_index=True, width='stretch')
 
 st.divider()
 

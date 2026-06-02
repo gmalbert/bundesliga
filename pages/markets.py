@@ -45,7 +45,7 @@ if teams_in_odds:
         ]
 
 st.caption(f"Showing {len(df)} lines")
-st.dataframe(df, hide_index=True, use_container_width=True, height=get_dataframe_height(df))
+st.dataframe(df, hide_index=True, width='stretch', height=get_dataframe_height(df))
 
 # ── Implied probability guide ──────────────────────────────────────────────
 with st.expander("ℹ️ How implied probabilities work"):

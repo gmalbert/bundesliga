@@ -81,7 +81,7 @@ bets_df = pd.DataFrame(rows).sort_values("_edge_raw", ascending=False).drop(colu
 
 st.success(f"✅ {len(bets_df)} value play{'s' if len(bets_df) != 1 else ''} found (edge ≥ {EV_THRESHOLD:.0%})")
 
-st.dataframe(bets_df, hide_index=True, use_container_width=True)
+st.dataframe(bets_df, hide_index=True, width='stretch')
 
 # ── Edge threshold slider ──────────────────────────────────────────────────
 st.divider()

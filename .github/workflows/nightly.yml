@@ -44,7 +44,21 @@ jobs:
       - name: Fetch Copa del Rey fixtures
         run: python fetch_copa_fixtures.py
 
+      - name: Check whether odds should be refreshed today
+        id: odds_gate
+        run: |
+          # Fetch odds on Mon (1), Thu (4), Sat (6) to stay well within the
+          # 500 req/month free-tier limit across all sibling repositories.
+          # Manual workflow_dispatch always fetches.
+          DOW=$(date -u +%u)
+          if [[ "$DOW" == "1" || "$DOW" == "4" || "$DOW" == "6" ]]; then
+            echo "fetch=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "fetch=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Fetch bookmaker odds
+        if: steps.odds_gate.outputs.fetch == 'true' || github.event_name == 'workflow_dispatch'
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python fetch_odds.py

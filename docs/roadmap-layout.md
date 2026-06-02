@@ -268,10 +268,10 @@ def _tab_predictions():
     # Risk filter buttons
     st.subheader("🎯 Match Predictions with Risk Assessment")
     col_f1, col_f2, col_f3, col_f4 = st.columns(4)
-    show_all  = col_f1.button("📊 All",          use_container_width=True)
-    show_low  = col_f2.button("🟢 Low Risk",      use_container_width=True)
-    show_mod  = col_f3.button("🟡 Moderate",      use_container_width=True)
-    show_high = col_f4.button("🔴 High/Critical", use_container_width=True)
+    show_all  = col_f1.button("📊 All",          width='stretch')
+    show_low  = col_f2.button("🟢 Low Risk",      width='stretch')
+    show_mod  = col_f3.button("🟡 Moderate",      width='stretch')
+    show_high = col_f4.button("🔴 High/Critical", width='stretch')
 
     # Build predictions DataFrame
     # ...build display_df with probabilities, risk, betting tips...
@@ -279,7 +279,7 @@ def _tab_predictions():
     # Color-coded risk rows
     if len(filtered) > 0:
         styled = filtered.style.apply(color_risk_rows, axis=1)
-        st.dataframe(styled, use_container_width=True, hide_index=True,
+        st.dataframe(styled, width='stretch', hide_index=True,
                      height=get_dataframe_height(filtered))
     else:
         st.info("No matches for selected filter.")
@@ -480,7 +480,7 @@ def _tab_raw_data():
     df_display = df_raw[display_cols].rename(columns=col_map)
 
     st.write(f"**{len(df_display):,} matches** in dataset")
-    st.dataframe(df_display, height=get_dataframe_height(df_display), use_container_width=True, hide_index=True)
+    st.dataframe(df_display, height=get_dataframe_height(df_display), width='stretch', hide_index=True)
 
     # Data dictionary
     with st.expander("📖 Data Dictionary"):
@@ -529,7 +529,7 @@ if bookmakers:
     if selected_bm != "All":
         df_odds = df_odds[df_odds["Bookmaker"] == selected_bm]
 
-st.dataframe(df_odds, use_container_width=True, hide_index=True)
+st.dataframe(df_odds, width='stretch', hide_index=True)
 ```
 
 ---
@@ -587,7 +587,7 @@ for _, row in merged.iterrows():
 if rows:
     bets_df = pd.DataFrame(rows).sort_values("Edge", ascending=False)
     st.success(f"Found {len(bets_df)} value plays (edge ≥ {EV_THRESHOLD:.0%})")
-    st.dataframe(bets_df, use_container_width=True, hide_index=True)
+    st.dataframe(bets_df, width='stretch', hide_index=True)
 else:
     st.info(f"No plays found with edge ≥ {EV_THRESHOLD:.0%} against current lines.")
 ```

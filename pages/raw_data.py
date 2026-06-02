@@ -84,7 +84,7 @@ rename_map = {
 st.dataframe(
     df[display_cols].rename(columns=rename_map),
     hide_index=True,
-    use_container_width=True,
+    width='stretch',
     height=get_dataframe_height(df),
 )
 

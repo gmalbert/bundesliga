@@ -121,11 +121,11 @@ fc1, fc2, fc3, fc4, fc5 = st.columns(5)
 if "risk_filter" not in st.session_state:
     st.session_state["risk_filter"] = "All"
 
-if fc1.button("📊 All",          use_container_width=True): st.session_state["risk_filter"] = "All"
-if fc2.button("🟢 Low",          use_container_width=True): st.session_state["risk_filter"] = "Low"
-if fc3.button("🟡 Moderate",     use_container_width=True): st.session_state["risk_filter"] = "Moderate"
-if fc4.button("🔴 High",         use_container_width=True): st.session_state["risk_filter"] = "High"
-if fc5.button("🚨 Critical",     use_container_width=True): st.session_state["risk_filter"] = "Critical"
+if fc1.button("📊 All",          width='stretch'): st.session_state["risk_filter"] = "All"
+if fc2.button("🟢 Low",          width='stretch'): st.session_state["risk_filter"] = "Low"
+if fc3.button("🟡 Moderate",     width='stretch'): st.session_state["risk_filter"] = "Moderate"
+if fc4.button("🔴 High",         width='stretch'): st.session_state["risk_filter"] = "High"
+if fc5.button("🚨 Critical",     width='stretch'): st.session_state["risk_filter"] = "Critical"
 
 # ── Team filter ────────────────────────────────────────────────────────────
 all_teams = sorted(set(preds["HomeTeam"].dropna()) | set(preds["AwayTeam"].dropna()))
@@ -182,7 +182,7 @@ styled = filtered[display_cols].style.apply(color_risk_rows, axis=1)
 st.dataframe(
     styled,
     hide_index=True,
-    use_container_width=True,
+    width='stretch',
     height=get_dataframe_height(filtered),
     column_config={
         "Home Win %": st.column_config.ProgressColumn(
@@ -220,5 +220,5 @@ with dl1:
         data=csv_bytes,
         file_name=f"bundesliga_predictions_{datetime.now().strftime('%Y%m%d')}.csv",
         mime="text/csv",
-        use_container_width=True,
+        width='stretch',
     )

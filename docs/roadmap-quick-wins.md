@@ -193,7 +193,7 @@ def add_team_filter(df: pd.DataFrame, team_col_home: str = "HomeTeam",
 
 # Usage in _tab_predictions():
 # display_df = add_team_filter(display_df)
-# st.dataframe(display_df, use_container_width=True, hide_index=True)
+# st.dataframe(display_df, width='stretch', hide_index=True)
 ```
 
 ---
@@ -296,7 +296,7 @@ def show_feature_importance_chart(
         coloraxis_showscale=False,
         margin={"l": 0, "r": 0, "t": 40, "b": 0},
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 
 # Usage (inside _tab_statistics or predictions tab):
@@ -314,7 +314,7 @@ Already included in [roadmap-layout.md](roadmap-layout.md) sidebar section. Extr
 ```python
 # In la_liga_linea.py sidebar section
 
-if st.sidebar.button("🔄 Refresh All Data", use_container_width=True):
+if st.sidebar.button("🔄 Refresh All Data", width='stretch'):
     # Clear the Streamlit cache so next load re-fetches everything
     st.cache_data.clear()
     st.sidebar.success("Cache cleared — reload page to refresh.")
@@ -386,13 +386,13 @@ def render_predictions_with_progress_bars(predictions_df: pd.DataFrame) -> None:
     """
     required = ["HomeTeam", "AwayTeam", "Date", "PredHomeWin", "PredDraw", "PredAwayWin"]
     if not all(c in predictions_df.columns for c in required):
-        st.dataframe(predictions_df, hide_index=True, use_container_width=True)
+        st.dataframe(predictions_df, hide_index=True, width='stretch')
         return
 
     st.dataframe(
         predictions_df,
         hide_index=True,
-        use_container_width=True,
+        width='stretch',
         column_config={
             "PredHomeWin": st.column_config.ProgressColumn(
                 label="Home Win",

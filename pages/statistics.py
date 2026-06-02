@@ -59,7 +59,7 @@ if path.exists(METRICS_PATH):
                 color_continuous_scale="reds",
             )
             fig.update_layout(coloraxis_showscale=False, yaxis_title=None)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
         else:
             st.info("Feature importance chart not available — model does not expose importances.")
     except Exception as _e:
@@ -94,7 +94,7 @@ if path.exists(fbref_path):
     xg_df = pd.read_csv(fbref_path)
     xg_df = xg_df.sort_values("xG", ascending=False).reset_index(drop=True)
     xg_df.insert(0, "#", xg_df.index + 1)
-    st.dataframe(xg_df, hide_index=True, use_container_width=True,
+    st.dataframe(xg_df, hide_index=True, width='stretch',
                  height=get_dataframe_height(xg_df, max_height=500))
 else:
     st.info("xG data not yet available — refreshed nightly.")
@@ -141,7 +141,7 @@ form_df.insert(0, "#", form_df.index + 1)
 st.dataframe(
     form_df[["#", "Team", "Form", "Pts (L5)"]],
     hide_index=True,
-    use_container_width=True,
+    width='stretch',
     height=get_dataframe_height(form_df, max_height=680),
 )
 
@@ -156,7 +156,7 @@ with hc1:
 with hc2:
     t2 = st.selectbox("Team 2", [t for t in all_teams if t != t1], key="h2h_t2")
 
-if st.button("🔍 Analyse H2H", use_container_width=False):
+if st.button("🔍 Analyse H2H", width='content'):
     mask = (
         ((hist_df["HomeTeam"] == t1) & (hist_df["AwayTeam"] == t2)) |
         ((hist_df["HomeTeam"] == t2) & (hist_df["AwayTeam"] == t1))
@@ -186,7 +186,7 @@ if st.button("🔍 Analyse H2H", use_container_width=False):
         st.dataframe(h2h[show_cols].rename(columns={
             "MatchDate": "Date", "FullTimeHomeGoals": "HG",
             "FullTimeAwayGoals": "AG", "FullTimeResult": "FTR",
-        }), hide_index=True, use_container_width=True)
+        }), hide_index=True, width='stretch')
 
 st.divider()
 
@@ -205,6 +205,6 @@ if path.exists(copa_path):
     else:
         flagged = recent_copa["TeamName"].nunique() if "TeamName" in recent_copa.columns else "?"
         st.warning(f"⚠️ {flagged} team(s) played DFB-Pokal in the last 7 days.")
-        st.dataframe(recent_copa, hide_index=True, use_container_width=True)
+        st.dataframe(recent_copa, hide_index=True, width='stretch')
 else:
     st.info("DFB-Pokal data not yet available — refreshed nightly.")

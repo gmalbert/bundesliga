@@ -44,7 +44,7 @@ if path.exists(HIST_PATH):
 
     if not standings.empty:
         st.subheader(f"📊 Bundesliga Table — {season_year - 1}-{str(season_year)[2:]}")
-        st.dataframe(standings, hide_index=True, use_container_width=True,
+        st.dataframe(standings, hide_index=True, width='stretch',
                      height=get_dataframe_height(standings, max_height=760))
         st.divider()
     else:
