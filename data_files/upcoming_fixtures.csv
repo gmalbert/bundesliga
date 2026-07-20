@@ -4,37 +4,37 @@ Date,Time,Matchday,HomeTeam,AwayTeam,Status
 2026-08-29,09:30 AM ET,1,1. FSV Mainz 05,SC Paderborn 07,SCHEDULED
 2026-08-29,09:30 AM ET,1,1. FC Union Berlin,Eintracht Frankfurt,SCHEDULED
 2026-08-29,09:30 AM ET,1,SV 07 Elversberg,Bayer 04 Leverkusen,SCHEDULED
-2026-08-29,09:30 AM ET,1,Borussia Dortmund,Hamburger SV,SCHEDULED
-2026-08-29,09:30 AM ET,1,FC Augsburg,FC Schalke 04,SCHEDULED
 2026-08-29,09:30 AM ET,1,1. FC Köln,TSG 1899 Hoffenheim,SCHEDULED
-2026-08-29,09:30 AM ET,1,SC Freiburg,SV Werder Bremen,SCHEDULED
+2026-08-29,12:30 PM ET,1,Borussia Dortmund,Hamburger SV,SCHEDULED
+2026-08-30,09:30 AM ET,1,SC Freiburg,SV Werder Bremen,SCHEDULED
+2026-08-30,11:30 AM ET,1,FC Augsburg,FC Schalke 04,SCHEDULED
+2026-09-04,02:30 PM ET,2,VfB Stuttgart,1. FC Köln,SCHEDULED
 2026-09-05,09:30 AM ET,2,SV Werder Bremen,RB Leipzig,SCHEDULED
-2026-09-05,09:30 AM ET,2,Eintracht Frankfurt,FC Augsburg,SCHEDULED
 2026-09-05,09:30 AM ET,2,TSG 1899 Hoffenheim,Borussia Dortmund,SCHEDULED
-2026-09-05,09:30 AM ET,2,Hamburger SV,1. FSV Mainz 05,SCHEDULED
-2026-09-05,09:30 AM ET,2,FC Schalke 04,FC Bayern München,SCHEDULED
 2026-09-05,09:30 AM ET,2,Bayer 04 Leverkusen,1. FC Union Berlin,SCHEDULED
-2026-09-05,09:30 AM ET,2,VfB Stuttgart,1. FC Köln,SCHEDULED
 2026-09-05,09:30 AM ET,2,Borussia Mönchengladbach,SV 07 Elversberg,SCHEDULED
 2026-09-05,09:30 AM ET,2,SC Paderborn 07,SC Freiburg,SCHEDULED
+2026-09-05,12:30 PM ET,2,FC Schalke 04,FC Bayern München,SCHEDULED
+2026-09-06,09:30 AM ET,2,Hamburger SV,1. FSV Mainz 05,SCHEDULED
+2026-09-06,11:30 AM ET,2,Eintracht Frankfurt,FC Augsburg,SCHEDULED
+2026-09-11,02:30 PM ET,3,1. FC Union Berlin,FC Schalke 04,SCHEDULED
 2026-09-12,09:30 AM ET,3,TSG 1899 Hoffenheim,VfB Stuttgart,SCHEDULED
 2026-09-12,09:30 AM ET,3,Borussia Dortmund,SC Paderborn 07,SCHEDULED
 2026-09-12,09:30 AM ET,3,FC Augsburg,Bayer 04 Leverkusen,SCHEDULED
-2026-09-12,09:30 AM ET,3,1. FC Union Berlin,FC Schalke 04,SCHEDULED
-2026-09-12,09:30 AM ET,3,1. FC Köln,SV Werder Bremen,SCHEDULED
-2026-09-12,09:30 AM ET,3,RB Leipzig,Hamburger SV,SCHEDULED
-2026-09-12,09:30 AM ET,3,SV 07 Elversberg,FC Bayern München,SCHEDULED
 2026-09-12,09:30 AM ET,3,1. FSV Mainz 05,Eintracht Frankfurt,SCHEDULED
 2026-09-12,09:30 AM ET,3,SC Freiburg,Borussia Mönchengladbach,SCHEDULED
-2026-09-19,09:30 AM ET,4,SC Paderborn 07,TSG 1899 Hoffenheim,SCHEDULED
-2026-09-19,09:30 AM ET,4,FC Bayern München,1. FC Union Berlin,SCHEDULED
-2026-09-19,09:30 AM ET,4,FC Schalke 04,SV 07 Elversberg,SCHEDULED
-2026-09-19,09:30 AM ET,4,VfB Stuttgart,Borussia Dortmund,SCHEDULED
-2026-09-19,09:30 AM ET,4,Bayer 04 Leverkusen,RB Leipzig,SCHEDULED
+2026-09-12,12:30 PM ET,3,1. FC Köln,SV Werder Bremen,SCHEDULED
+2026-09-13,09:30 AM ET,3,RB Leipzig,Hamburger SV,SCHEDULED
+2026-09-13,11:30 AM ET,3,SV 07 Elversberg,FC Bayern München,SCHEDULED
+2026-09-18,02:30 PM ET,4,FC Bayern München,1. FC Union Berlin,SCHEDULED
 2026-09-19,09:30 AM ET,4,Hamburger SV,1. FC Köln,SCHEDULED
 2026-09-19,09:30 AM ET,4,Borussia Mönchengladbach,1. FSV Mainz 05,SCHEDULED
 2026-09-19,09:30 AM ET,4,SV Werder Bremen,FC Augsburg,SCHEDULED
 2026-09-19,09:30 AM ET,4,Eintracht Frankfurt,SC Freiburg,SCHEDULED
+2026-09-19,12:30 PM ET,4,VfB Stuttgart,Borussia Dortmund,SCHEDULED
+2026-09-20,09:30 AM ET,4,Bayer 04 Leverkusen,RB Leipzig,SCHEDULED
+2026-09-20,11:30 AM ET,4,FC Schalke 04,SV 07 Elversberg,SCHEDULED
+2026-09-20,01:30 PM ET,4,SC Paderborn 07,TSG 1899 Hoffenheim,SCHEDULED
 2026-10-10,09:30 AM ET,5,1. FSV Mainz 05,Bayer 04 Leverkusen,SCHEDULED
 2026-10-10,09:30 AM ET,5,SC Paderborn 07,VfB Stuttgart,SCHEDULED
 2026-10-10,09:30 AM ET,5,1. FC Köln,Borussia Mönchengladbach,SCHEDULED
