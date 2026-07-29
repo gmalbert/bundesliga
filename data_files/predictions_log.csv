@@ -344,3 +344,264 @@ LoggedAt,MatchDate,HomeTeam,AwayTeam,PredHomeWin,PredDraw,PredAwayWin,PredictedR
 2026-07-20 08:06:55,2026-09-20,Bayer 04 Leverkusen,RB Leipzig,34.6,22.9,42.6,A,,,ensemble_v1
 2026-07-20 08:06:55,2026-09-20,FC Schalke 04,SV 07 Elversberg,42.4,34.1,23.5,H,,,ensemble_v1
 2026-07-20 08:06:55,2026-09-20,SC Paderborn 07,TSG 1899 Hoffenheim,30.1,18.3,51.6,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-09,1. FSV Mainz 05,Bayer 04 Leverkusen,47.4,25.7,26.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-09,SC Paderborn 07,VfB Stuttgart,30.3,16.3,53.4,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-09,1. FC Köln,Borussia Mönchengladbach,38.0,30.3,31.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-09,RB Leipzig,Eintracht Frankfurt,57.4,26.3,16.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-09,SC Freiburg,FC Schalke 04,36.3,29.0,34.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-09,1. FC Union Berlin,SV 07 Elversberg,46.2,25.1,28.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-09,TSG 1899 Hoffenheim,Hamburger SV,36.6,27.7,35.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-09,FC Augsburg,FC Bayern München,24.6,19.3,56.1,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-09,Borussia Dortmund,SV Werder Bremen,64.4,17.6,18.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-16,1. FC Union Berlin,Borussia Dortmund,50.6,16.2,33.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-16,Hamburger SV,VfB Stuttgart,36.0,20.6,43.4,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-16,SV Werder Bremen,SC Paderborn 07,55.5,23.0,21.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-16,SV 07 Elversberg,FC Augsburg,28.4,22.3,49.3,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-16,FC Bayern München,RB Leipzig,51.9,15.5,32.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-16,Borussia Mönchengladbach,TSG 1899 Hoffenheim,43.4,26.4,30.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-16,Bayer 04 Leverkusen,SC Freiburg,35.1,24.6,40.3,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-16,Eintracht Frankfurt,1. FC Köln,33.0,28.2,38.8,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-16,FC Schalke 04,1. FSV Mainz 05,45.4,29.2,25.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-23,1. FSV Mainz 05,SV Werder Bremen,47.1,27.9,24.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-23,1. FC Köln,FC Schalke 04,41.2,26.2,32.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-23,RB Leipzig,SV 07 Elversberg,60.1,24.3,15.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-23,VfB Stuttgart,Borussia Mönchengladbach,54.8,18.8,26.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-23,SC Paderborn 07,Hamburger SV,30.3,19.8,49.9,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-23,TSG 1899 Hoffenheim,Bayer 04 Leverkusen,38.9,27.7,33.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-23,SC Freiburg,FC Bayern München,18.6,18.8,62.6,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-23,Borussia Dortmund,Eintracht Frankfurt,61.7,22.7,15.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-23,FC Augsburg,1. FC Union Berlin,41.7,20.6,37.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-30,Borussia Mönchengladbach,SC Paderborn 07,52.6,26.8,20.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-30,FC Schalke 04,RB Leipzig,45.5,25.7,28.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-30,1. FC Union Berlin,1. FC Köln,41.5,28.0,30.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-30,FC Augsburg,SC Freiburg,42.2,23.5,34.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-30,SV Werder Bremen,TSG 1899 Hoffenheim,41.9,21.1,37.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-30,Eintracht Frankfurt,Hamburger SV,39.0,24.4,36.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-30,FC Bayern München,Borussia Dortmund,66.7,12.0,21.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-30,SV 07 Elversberg,1. FSV Mainz 05,32.6,23.9,43.5,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-10-30,Bayer 04 Leverkusen,VfB Stuttgart,32.6,21.0,46.4,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-06,RB Leipzig,FC Augsburg,52.6,27.0,20.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-06,VfB Stuttgart,SV Werder Bremen,40.1,26.6,33.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-06,Borussia Dortmund,SV 07 Elversberg,63.6,21.4,15.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-06,1. FSV Mainz 05,FC Bayern München,24.6,17.7,57.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-06,Hamburger SV,Borussia Mönchengladbach,55.9,19.2,24.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-06,SC Paderborn 07,Eintracht Frankfurt,35.6,18.7,45.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-06,SC Freiburg,1. FC Union Berlin,34.9,22.7,42.4,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-06,1. FC Köln,Bayer 04 Leverkusen,33.6,36.8,29.6,D,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-06,TSG 1899 Hoffenheim,FC Schalke 04,43.3,25.4,31.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-20,Bayer 04 Leverkusen,SC Paderborn 07,45.2,29.0,25.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-20,1. FC Union Berlin,RB Leipzig,36.6,18.6,44.8,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-20,FC Bayern München,1. FC Köln,71.9,15.2,12.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-20,SV 07 Elversberg,SC Freiburg,32.8,16.2,51.0,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-20,FC Schalke 04,VfB Stuttgart,40.6,27.5,31.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-20,Borussia Mönchengladbach,Borussia Dortmund,55.8,18.9,25.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-20,SV Werder Bremen,Hamburger SV,41.0,23.0,36.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-20,FC Augsburg,1. FSV Mainz 05,44.0,22.0,34.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-20,Eintracht Frankfurt,TSG 1899 Hoffenheim,40.9,25.5,33.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-27,1. FC Köln,SV 07 Elversberg,43.3,34.4,22.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-27,1. FSV Mainz 05,1. FC Union Berlin,41.2,21.0,37.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-27,SC Paderborn 07,FC Schalke 04,39.0,15.2,45.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-27,SV Werder Bremen,Borussia Mönchengladbach,46.6,18.8,34.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-27,VfB Stuttgart,Eintracht Frankfurt,44.6,30.6,24.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-27,TSG 1899 Hoffenheim,FC Augsburg,34.1,30.1,35.8,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-27,Borussia Dortmund,Bayer 04 Leverkusen,61.5,21.1,17.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-27,SC Freiburg,RB Leipzig,32.2,26.7,41.1,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-11-27,Hamburger SV,FC Bayern München,23.5,17.4,59.1,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-04,1. FC Union Berlin,Hamburger SV,47.7,20.2,32.1,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-04,FC Schalke 04,Borussia Dortmund,52.0,24.0,24.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-04,Bayer 04 Leverkusen,Borussia Mönchengladbach,45.8,19.7,34.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-04,Eintracht Frankfurt,SV Werder Bremen,34.8,30.9,34.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-04,RB Leipzig,1. FSV Mainz 05,60.3,20.1,19.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-04,SV 07 Elversberg,VfB Stuttgart,30.3,16.3,53.4,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-04,SC Freiburg,TSG 1899 Hoffenheim,40.2,29.5,30.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-04,FC Bayern München,SC Paderborn 07,72.2,14.7,13.1,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-04,FC Augsburg,1. FC Köln,35.9,34.5,29.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-11,SC Paderborn 07,SV 07 Elversberg,37.2,22.4,40.5,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-11,SV Werder Bremen,Bayer 04 Leverkusen,44.6,22.9,32.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-11,VfB Stuttgart,1. FC Union Berlin,43.0,18.5,38.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-11,Borussia Dortmund,FC Augsburg,57.5,24.9,17.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-11,Hamburger SV,FC Schalke 04,44.6,27.8,27.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-11,1. FSV Mainz 05,SC Freiburg,46.0,25.9,28.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-11,1. FC Köln,RB Leipzig,34.1,29.1,36.8,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-11,TSG 1899 Hoffenheim,FC Bayern München,19.6,16.4,63.9,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-11,Borussia Mönchengladbach,Eintracht Frankfurt,40.0,38.0,22.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-18,FC Schalke 04,Borussia Mönchengladbach,50.4,24.4,25.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-18,FC Bayern München,SV Werder Bremen,75.1,12.2,12.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-18,SV 07 Elversberg,Hamburger SV,30.3,19.8,49.9,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-18,Bayer 04 Leverkusen,Eintracht Frankfurt,35.7,32.3,32.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-18,SC Freiburg,VfB Stuttgart,31.8,22.4,45.9,A,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-18,RB Leipzig,Borussia Dortmund,58.1,16.8,25.1,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-18,1. FSV Mainz 05,1. FC Köln,40.2,38.5,21.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-18,1. FC Union Berlin,TSG 1899 Hoffenheim,47.7,19.3,33.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2026-12-18,FC Augsburg,SC Paderborn 07,50.2,27.7,22.1,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-08,VfB Stuttgart,FC Augsburg,41.6,27.6,30.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-08,Hamburger SV,Bayer 04 Leverkusen,45.2,25.9,28.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-08,1. FC Köln,SC Freiburg,38.8,29.7,31.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-08,Eintracht Frankfurt,FC Schalke 04,42.3,20.1,37.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-08,TSG 1899 Hoffenheim,SV 07 Elversberg,47.0,29.9,23.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-08,Borussia Mönchengladbach,FC Bayern München,30.0,21.0,49.1,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-08,Borussia Dortmund,1. FSV Mainz 05,64.9,17.7,17.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-08,SV Werder Bremen,1. FC Union Berlin,40.0,22.4,37.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-08,SC Paderborn 07,RB Leipzig,31.0,18.2,50.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-12,1. FSV Mainz 05,TSG 1899 Hoffenheim,47.9,26.3,25.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-12,SC Freiburg,Hamburger SV,37.9,28.5,33.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-12,FC Schalke 04,SV Werder Bremen,43.2,32.1,24.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-12,RB Leipzig,VfB Stuttgart,48.6,18.5,32.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-12,1. FC Union Berlin,SC Paderborn 07,46.2,25.1,28.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-12,FC Bayern München,Bayer 04 Leverkusen,71.4,13.3,15.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-12,FC Augsburg,Borussia Mönchengladbach,52.4,19.2,28.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-12,SV 07 Elversberg,Eintracht Frankfurt,35.6,18.7,45.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-12,1. FC Köln,Borussia Dortmund,39.0,31.2,29.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-15,SV Werder Bremen,SV 07 Elversberg,55.5,23.0,21.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-15,Eintracht Frankfurt,FC Bayern München,20.6,15.8,63.6,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-15,SC Paderborn 07,1. FC Köln,30.5,18.8,50.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-15,TSG 1899 Hoffenheim,RB Leipzig,34.2,24.6,41.1,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-15,Bayer 04 Leverkusen,FC Schalke 04,36.0,24.7,39.3,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-15,VfB Stuttgart,1. FSV Mainz 05,45.7,23.4,30.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-15,Hamburger SV,FC Augsburg,39.1,30.4,30.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-15,Borussia Mönchengladbach,1. FC Union Berlin,45.8,23.9,30.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-15,Borussia Dortmund,SC Freiburg,60.4,21.3,18.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-22,SV Werder Bremen,SC Freiburg,44.9,20.6,34.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-22,Hamburger SV,Borussia Dortmund,50.4,18.2,31.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-22,SC Paderborn 07,1. FSV Mainz 05,32.6,23.9,43.5,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-22,FC Schalke 04,FC Augsburg,38.4,36.4,25.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-22,TSG 1899 Hoffenheim,1. FC Köln,32.3,37.9,29.8,D,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-22,VfB Stuttgart,FC Bayern München,21.9,17.5,60.6,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-22,Borussia Mönchengladbach,RB Leipzig,45.3,27.0,27.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-22,Eintracht Frankfurt,1. FC Union Berlin,34.3,20.6,45.1,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-22,Bayer 04 Leverkusen,SV 07 Elversberg,45.2,29.0,25.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-29,SV 07 Elversberg,Borussia Mönchengladbach,32.9,16.9,50.2,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-29,FC Augsburg,Eintracht Frankfurt,40.0,32.2,27.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-29,1. FSV Mainz 05,Hamburger SV,45.4,26.6,28.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-29,RB Leipzig,SV Werder Bremen,62.9,20.4,16.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-29,1. FC Köln,VfB Stuttgart,32.6,28.4,39.0,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-29,1. FC Union Berlin,Bayer 04 Leverkusen,47.7,19.4,32.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-29,SC Freiburg,SC Paderborn 07,44.9,31.8,23.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-29,Borussia Dortmund,TSG 1899 Hoffenheim,60.9,19.9,19.1,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-01-29,FC Bayern München,FC Schalke 04,71.1,14.7,14.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-05,Eintracht Frankfurt,1. FSV Mainz 05,44.7,23.7,31.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-05,Borussia Mönchengladbach,SC Freiburg,45.3,27.0,27.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-05,FC Schalke 04,1. FC Union Berlin,37.0,31.3,31.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-05,Hamburger SV,RB Leipzig,36.4,23.3,40.3,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-05,Bayer 04 Leverkusen,FC Augsburg,32.5,28.0,39.5,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-05,SV Werder Bremen,1. FC Köln,39.2,25.7,35.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-05,VfB Stuttgart,TSG 1899 Hoffenheim,46.3,24.7,29.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-05,FC Bayern München,SV 07 Elversberg,72.2,14.7,13.1,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-05,SC Paderborn 07,Borussia Dortmund,34.6,19.7,45.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-12,1. FC Köln,Hamburger SV,30.9,35.6,33.5,D,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-12,1. FSV Mainz 05,Borussia Mönchengladbach,60.0,18.4,21.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-12,1. FC Union Berlin,FC Bayern München,25.2,17.4,57.4,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-12,SV 07 Elversberg,FC Schalke 04,39.0,15.2,45.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-12,Borussia Dortmund,VfB Stuttgart,57.3,20.8,21.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-12,TSG 1899 Hoffenheim,SC Paderborn 07,47.0,29.9,23.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-12,SC Freiburg,Eintracht Frankfurt,37.6,38.0,24.3,D,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-12,FC Augsburg,SV Werder Bremen,36.7,27.9,35.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-12,RB Leipzig,Bayer 04 Leverkusen,56.1,23.8,20.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-19,FC Schalke 04,SC Freiburg,44.5,30.0,25.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-19,VfB Stuttgart,SC Paderborn 07,47.8,27.0,25.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-19,Borussia Mönchengladbach,1. FC Köln,34.8,43.7,21.5,D,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-19,SV Werder Bremen,Borussia Dortmund,52.4,17.0,30.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-19,Hamburger SV,TSG 1899 Hoffenheim,45.5,26.6,27.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-19,Bayer 04 Leverkusen,1. FSV Mainz 05,38.4,22.3,39.3,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-19,Eintracht Frankfurt,RB Leipzig,34.2,20.2,45.6,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-19,FC Bayern München,FC Augsburg,69.5,15.3,15.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-19,SV 07 Elversberg,1. FC Union Berlin,28.0,20.0,52.0,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-26,VfB Stuttgart,Hamburger SV,47.3,22.9,29.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-26,1. FC Köln,Eintracht Frankfurt,34.1,38.7,27.2,D,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-26,SC Freiburg,Bayer 04 Leverkusen,39.4,29.5,31.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-26,FC Augsburg,SV 07 Elversberg,50.2,27.7,22.1,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-26,1. FSV Mainz 05,FC Schalke 04,45.8,27.8,26.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-26,TSG 1899 Hoffenheim,Borussia Mönchengladbach,48.4,19.3,32.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-26,SC Paderborn 07,SV Werder Bremen,33.9,16.8,49.3,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-26,RB Leipzig,FC Bayern München,33.0,16.7,50.3,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-02-26,Borussia Dortmund,1. FC Union Berlin,59.8,20.6,19.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-02,Eintracht Frankfurt,Borussia Dortmund,44.2,19.1,36.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-02,FC Schalke 04,1. FC Köln,37.0,32.2,30.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-02,Bayer 04 Leverkusen,TSG 1899 Hoffenheim,37.0,24.8,38.2,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-02,FC Bayern München,SC Freiburg,69.6,14.8,15.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-02,SV Werder Bremen,1. FSV Mainz 05,48.9,19.7,31.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-02,1. FC Union Berlin,FC Augsburg,42.6,23.5,34.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-02,SV 07 Elversberg,RB Leipzig,31.0,18.2,50.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-02,Borussia Mönchengladbach,VfB Stuttgart,43.6,22.4,34.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-02,Hamburger SV,SC Paderborn 07,45.5,33.0,21.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-05,Borussia Dortmund,FC Bayern München,47.4,18.1,34.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-05,SC Freiburg,FC Augsburg,34.6,32.4,33.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-05,1. FSV Mainz 05,SV 07 Elversberg,45.8,34.2,20.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-05,Hamburger SV,Eintracht Frankfurt,39.8,37.1,23.1,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-05,VfB Stuttgart,Bayer 04 Leverkusen,45.7,24.7,29.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-05,RB Leipzig,FC Schalke 04,51.8,25.6,22.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-05,SC Paderborn 07,Borussia Mönchengladbach,32.9,16.9,50.2,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-05,1. FC Köln,1. FC Union Berlin,25.4,36.9,37.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-05,TSG 1899 Hoffenheim,SV Werder Bremen,32.9,32.5,34.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-12,1. FC Union Berlin,SC Freiburg,46.7,18.9,34.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-12,SV 07 Elversberg,Borussia Dortmund,34.6,19.7,45.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-12,Eintracht Frankfurt,SC Paderborn 07,46.6,28.6,24.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-12,FC Augsburg,RB Leipzig,37.5,22.4,40.1,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-12,Borussia Mönchengladbach,Hamburger SV,40.5,27.7,31.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-12,SV Werder Bremen,VfB Stuttgart,40.2,18.7,41.1,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-12,FC Schalke 04,TSG 1899 Hoffenheim,43.6,30.6,25.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-12,FC Bayern München,1. FSV Mainz 05,71.5,12.2,16.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-12,Bayer 04 Leverkusen,1. FC Köln,31.5,31.5,37.0,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-19,1. FC Köln,FC Bayern München,17.0,21.3,61.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-19,TSG 1899 Hoffenheim,Eintracht Frankfurt,37.4,37.1,25.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-19,Borussia Dortmund,Borussia Mönchengladbach,65.8,19.8,14.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-19,1. FSV Mainz 05,FC Augsburg,42.9,28.6,28.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-19,VfB Stuttgart,FC Schalke 04,40.5,24.3,35.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-19,RB Leipzig,1. FC Union Berlin,51.9,18.5,29.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-19,SC Freiburg,SV 07 Elversberg,44.9,31.8,23.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-19,Hamburger SV,SV Werder Bremen,37.7,31.7,30.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-03-19,SC Paderborn 07,Bayer 04 Leverkusen,31.0,20.2,48.8,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-02,RB Leipzig,SC Freiburg,56.3,21.9,21.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-02,SV 07 Elversberg,1. FC Köln,30.5,18.8,50.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-02,FC Bayern München,Hamburger SV,71.6,13.8,14.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-02,FC Augsburg,TSG 1899 Hoffenheim,43.4,23.6,33.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-02,Borussia Mönchengladbach,SV Werder Bremen,36.2,31.8,32.0,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-02,Eintracht Frankfurt,VfB Stuttgart,35.1,18.8,46.1,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-02,1. FC Union Berlin,1. FSV Mainz 05,47.6,19.3,33.1,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-02,Bayer 04 Leverkusen,Borussia Dortmund,46.6,17.0,36.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-02,FC Schalke 04,SC Paderborn 07,42.4,34.1,23.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-09,VfB Stuttgart,SV 07 Elversberg,47.8,27.0,25.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-09,SC Paderborn 07,FC Bayern München,15.7,17.2,67.1,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-09,TSG 1899 Hoffenheim,SC Freiburg,36.8,27.7,35.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-09,1. FSV Mainz 05,RB Leipzig,38.7,23.7,37.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-09,SV Werder Bremen,Eintracht Frankfurt,40.4,27.7,31.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-09,Borussia Dortmund,FC Schalke 04,61.3,21.8,16.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-09,Hamburger SV,1. FC Union Berlin,37.7,21.5,40.8,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-09,Borussia Mönchengladbach,Bayer 04 Leverkusen,46.3,27.2,26.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-09,1. FC Köln,FC Augsburg,28.9,42.9,28.2,D,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-16,Bayer 04 Leverkusen,SV Werder Bremen,31.3,26.5,42.2,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-16,Eintracht Frankfurt,Borussia Mönchengladbach,46.4,19.0,34.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-16,1. FC Union Berlin,VfB Stuttgart,42.3,17.2,40.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-16,FC Bayern München,TSG 1899 Hoffenheim,72.6,13.0,14.5,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-16,FC Schalke 04,Hamburger SV,39.1,34.6,26.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-16,SV 07 Elversberg,SC Paderborn 07,37.2,22.4,40.5,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-16,FC Augsburg,Borussia Dortmund,49.3,16.9,33.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-16,SC Freiburg,1. FSV Mainz 05,40.4,26.9,32.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-16,RB Leipzig,1. FC Köln,53.3,25.5,21.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-23,SV Werder Bremen,FC Bayern München,24.3,14.3,61.4,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-23,1. FC Köln,1. FSV Mainz 05,38.9,32.6,28.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-23,Hamburger SV,SV 07 Elversberg,45.5,33.0,21.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-23,Borussia Dortmund,RB Leipzig,55.9,20.2,23.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-23,TSG 1899 Hoffenheim,1. FC Union Berlin,33.4,20.8,45.8,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-23,SC Paderborn 07,FC Augsburg,28.4,22.3,49.3,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-23,VfB Stuttgart,SC Freiburg,44.5,24.1,31.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-23,Borussia Mönchengladbach,FC Schalke 04,51.0,25.2,23.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-04-23,Eintracht Frankfurt,Bayer 04 Leverkusen,40.6,26.5,32.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-07,FC Schalke 04,Eintracht Frankfurt,41.9,36.2,21.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-07,RB Leipzig,SC Paderborn 07,60.1,24.3,15.7,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-07,SC Freiburg,1. FC Köln,30.0,36.4,33.7,D,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-07,1. FSV Mainz 05,Borussia Dortmund,52.3,16.3,31.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-07,FC Augsburg,VfB Stuttgart,39.4,20.1,40.5,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-07,1. FC Union Berlin,SV Werder Bremen,40.6,21.6,37.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-07,SV 07 Elversberg,TSG 1899 Hoffenheim,30.1,18.3,51.6,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-07,Bayer 04 Leverkusen,Hamburger SV,35.6,25.5,38.9,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-07,FC Bayern München,Borussia Mönchengladbach,76.9,11.8,11.3,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-14,Eintracht Frankfurt,SV 07 Elversberg,46.6,28.6,24.8,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-14,SC Paderborn 07,1. FC Union Berlin,28.0,20.0,52.0,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-14,VfB Stuttgart,RB Leipzig,32.0,22.3,45.7,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-14,Borussia Dortmund,1. FC Köln,56.4,27.2,16.4,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-14,Hamburger SV,SC Freiburg,43.8,26.0,30.2,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-14,Bayer 04 Leverkusen,FC Bayern München,19.3,16.6,64.1,A,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-14,SV Werder Bremen,FC Schalke 04,54.2,18.1,27.6,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-14,Borussia Mönchengladbach,FC Augsburg,41.1,31.0,27.9,H,,,ensemble_v1
+2026-07-29 08:01:26,2027-05-14,TSG 1899 Hoffenheim,1. FSV Mainz 05,41.2,24.1,34.8,H,,,ensemble_v1
