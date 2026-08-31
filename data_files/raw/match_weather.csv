@@ -1,12 +1,4 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-08-29,RB Leipzig,Showers,25.6,0.1,16.3
-2026-08-29,1. FSV Mainz 05,N/A,,,
-2026-08-29,1. FC Union Berlin,N/A,,,
-2026-08-29,SV 07 Elversberg,N/A,,,
-2026-08-29,1. FC Köln,N/A,,,
-2026-08-29,Borussia Dortmund,N/A,,,
-2026-08-30,SC Freiburg,N/A,,,
-2026-08-30,FC Augsburg,N/A,,,
 2026-09-04,VfB Stuttgart,N/A,,,
 2026-09-05,SV Werder Bremen,N/A,,,
 2026-09-05,TSG 1899 Hoffenheim,N/A,,,
@@ -23,7 +15,7 @@ Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
 2026-09-12,1. FSV Mainz 05,N/A,,,
 2026-09-12,SC Freiburg,N/A,,,
 2026-09-12,1. FC Köln,N/A,,,
-2026-09-13,RB Leipzig,Rainy,18.5,1.2,16.1
+2026-09-13,RB Leipzig,Partly cloudy,15.4,0.0,15.3
 2026-09-13,SV 07 Elversberg,N/A,,,
 2026-09-18,FC Bayern München,N/A,,,
 2026-09-19,Hamburger SV,N/A,,,
