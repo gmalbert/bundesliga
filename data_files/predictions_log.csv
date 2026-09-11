@@ -605,3 +605,19 @@ LoggedAt,MatchDate,HomeTeam,AwayTeam,PredHomeWin,PredDraw,PredAwayWin,PredictedR
 2026-07-29 08:01:26,2027-05-14,SV Werder Bremen,FC Schalke 04,54.2,18.1,27.6,H,,,ensemble_v1
 2026-07-29 08:01:26,2027-05-14,Borussia Mönchengladbach,FC Augsburg,41.1,31.0,27.9,H,,,ensemble_v1
 2026-07-29 08:01:26,2027-05-14,TSG 1899 Hoffenheim,1. FSV Mainz 05,41.2,24.1,34.8,H,,,ensemble_v1
+2026-09-11 07:17:37,2026-10-11,1. FC Köln,Borussia Mönchengladbach,38.0,30.3,31.7,H,,,ensemble_v1
+2026-09-11 07:17:37,2026-10-11,SC Freiburg,FC Schalke 04,36.3,29.0,34.6,H,,,ensemble_v1
+2026-09-11 07:17:37,2026-10-18,Bayer 04 Leverkusen,SC Freiburg,35.1,24.6,40.3,A,,,ensemble_v1
+2026-09-11 07:17:37,2026-10-18,Borussia Mönchengladbach,TSG 1899 Hoffenheim,43.4,26.4,30.2,H,,,ensemble_v1
+2026-09-11 07:17:37,2026-10-25,TSG 1899 Hoffenheim,Bayer 04 Leverkusen,38.9,27.7,33.4,H,,,ensemble_v1
+2026-09-11 07:17:37,2026-10-25,SC Freiburg,FC Bayern München,18.6,18.8,62.6,A,,,ensemble_v1
+2026-09-11 07:17:37,2026-11-01,1. FC Union Berlin,1. FC Köln,41.4,28.0,30.5,H,,,ensemble_v1
+2026-09-11 07:17:37,2026-11-01,Eintracht Frankfurt,Hamburger SV,39.0,24.4,36.6,H,,,ensemble_v1
+2026-09-11 07:17:37,2026-11-08,1. FC Köln,Bayer 04 Leverkusen,33.6,36.8,29.6,D,,,ensemble_v1
+2026-09-11 07:17:37,2026-11-08,SC Freiburg,1. FC Union Berlin,34.9,22.7,42.4,A,,,ensemble_v1
+2026-09-11 07:17:37,2026-11-08,TSG 1899 Hoffenheim,FC Schalke 04,43.3,25.4,31.2,H,,,ensemble_v1
+2026-09-11 07:17:37,2026-11-22,FC Augsburg,1. FSV Mainz 05,43.9,22.0,34.0,H,,,ensemble_v1
+2026-09-11 07:17:37,2026-11-22,SV Werder Bremen,Hamburger SV,41.0,23.0,36.0,H,,,ensemble_v1
+2026-09-11 07:17:37,2026-11-29,SC Freiburg,RB Leipzig,32.2,26.7,41.1,A,,,ensemble_v1
+2026-09-11 07:17:37,2026-11-29,TSG 1899 Hoffenheim,FC Augsburg,34.1,30.1,35.8,A,,,ensemble_v1
+2026-09-11 07:17:37,2026-11-29,Borussia Dortmund,Bayer 04 Leverkusen,61.5,21.1,17.5,H,,,ensemble_v1
