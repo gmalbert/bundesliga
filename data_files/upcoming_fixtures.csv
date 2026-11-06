@@ -26,6 +26,69 @@ Date,Time,Matchday,HomeTeam,AwayTeam,Status
 2026-11-29,09:30 AM ET,11,SC Freiburg,RB Leipzig,TIMED
 2026-11-29,11:30 AM ET,11,TSG 1899 Hoffenheim,FC Augsburg,TIMED
 2026-11-29,01:30 PM ET,11,Borussia Dortmund,Bayer 04 Leverkusen,TIMED
+2026-12-04,02:30 PM ET,12,FC Bayern München,SC Paderborn 07,TIMED
+2026-12-05,09:30 AM ET,12,1. FC Union Berlin,Hamburger SV,TIMED
+2026-12-05,09:30 AM ET,12,Bayer 04 Leverkusen,Borussia Mönchengladbach,TIMED
+2026-12-05,09:30 AM ET,12,RB Leipzig,1. FSV Mainz 05,TIMED
+2026-12-05,09:30 AM ET,12,SC Freiburg,TSG 1899 Hoffenheim,TIMED
+2026-12-05,09:30 AM ET,12,FC Augsburg,1. FC Köln,TIMED
+2026-12-05,12:30 PM ET,12,Eintracht Frankfurt,SV Werder Bremen,TIMED
+2026-12-06,09:30 AM ET,12,FC Schalke 04,Borussia Dortmund,TIMED
+2026-12-06,11:30 AM ET,12,SV 07 Elversberg,VfB Stuttgart,TIMED
+2026-12-11,02:30 PM ET,13,Hamburger SV,FC Schalke 04,TIMED
+2026-12-12,09:30 AM ET,13,SC Paderborn 07,SV 07 Elversberg,TIMED
+2026-12-12,09:30 AM ET,13,VfB Stuttgart,1. FC Union Berlin,TIMED
+2026-12-12,09:30 AM ET,13,Borussia Dortmund,FC Augsburg,TIMED
+2026-12-12,09:30 AM ET,13,1. FC Köln,RB Leipzig,TIMED
+2026-12-12,12:30 PM ET,13,Borussia Mönchengladbach,Eintracht Frankfurt,TIMED
+2026-12-13,09:30 AM ET,13,1. FSV Mainz 05,SC Freiburg,TIMED
+2026-12-13,11:30 AM ET,13,TSG 1899 Hoffenheim,FC Bayern München,TIMED
+2026-12-13,01:30 PM ET,13,SV Werder Bremen,Bayer 04 Leverkusen,TIMED
+2026-12-18,02:30 PM ET,14,FC Bayern München,SV Werder Bremen,TIMED
+2026-12-19,09:30 AM ET,14,SV 07 Elversberg,Hamburger SV,TIMED
+2026-12-19,09:30 AM ET,14,Bayer 04 Leverkusen,Eintracht Frankfurt,TIMED
+2026-12-19,09:30 AM ET,14,1. FSV Mainz 05,1. FC Köln,TIMED
+2026-12-19,09:30 AM ET,14,FC Augsburg,SC Paderborn 07,TIMED
+2026-12-19,12:30 PM ET,14,RB Leipzig,Borussia Dortmund,TIMED
+2026-12-20,09:30 AM ET,14,SC Freiburg,VfB Stuttgart,TIMED
+2026-12-20,11:30 AM ET,14,1. FC Union Berlin,TSG 1899 Hoffenheim,TIMED
+2026-12-20,01:30 PM ET,14,FC Schalke 04,Borussia Mönchengladbach,TIMED
+2027-01-08,02:30 PM ET,15,Borussia Dortmund,1. FSV Mainz 05,TIMED
+2027-01-09,09:30 AM ET,15,VfB Stuttgart,FC Augsburg,TIMED
+2027-01-09,09:30 AM ET,15,1. FC Köln,SC Freiburg,TIMED
+2027-01-09,09:30 AM ET,15,Eintracht Frankfurt,FC Schalke 04,TIMED
+2027-01-09,09:30 AM ET,15,TSG 1899 Hoffenheim,SV 07 Elversberg,TIMED
+2027-01-09,09:30 AM ET,15,SC Paderborn 07,RB Leipzig,TIMED
+2027-01-09,12:30 PM ET,15,Borussia Mönchengladbach,FC Bayern München,TIMED
+2027-01-10,09:30 AM ET,15,SV Werder Bremen,1. FC Union Berlin,TIMED
+2027-01-10,11:30 AM ET,15,Hamburger SV,Bayer 04 Leverkusen,TIMED
+2027-01-12,12:30 PM ET,16,RB Leipzig,VfB Stuttgart,TIMED
+2027-01-12,02:30 PM ET,16,1. FSV Mainz 05,TSG 1899 Hoffenheim,TIMED
+2027-01-12,02:30 PM ET,16,FC Augsburg,Borussia Mönchengladbach,TIMED
+2027-01-12,02:30 PM ET,16,1. FC Köln,Borussia Dortmund,TIMED
+2027-01-13,12:30 PM ET,16,SV 07 Elversberg,Eintracht Frankfurt,TIMED
+2027-01-13,02:30 PM ET,16,SC Freiburg,Hamburger SV,TIMED
+2027-01-13,02:30 PM ET,16,1. FC Union Berlin,SC Paderborn 07,TIMED
+2027-01-13,02:30 PM ET,16,FC Bayern München,Bayer 04 Leverkusen,TIMED
+2027-01-14,02:30 PM ET,16,FC Schalke 04,SV Werder Bremen,TIMED
+2027-01-15,02:30 PM ET,17,VfB Stuttgart,1. FSV Mainz 05,TIMED
+2027-01-16,09:30 AM ET,17,SC Paderborn 07,1. FC Köln,TIMED
+2027-01-16,09:30 AM ET,17,TSG 1899 Hoffenheim,RB Leipzig,TIMED
+2027-01-16,09:30 AM ET,17,Hamburger SV,FC Augsburg,TIMED
+2027-01-16,09:30 AM ET,17,Borussia Mönchengladbach,1. FC Union Berlin,TIMED
+2027-01-16,09:30 AM ET,17,Borussia Dortmund,SC Freiburg,TIMED
+2027-01-16,12:30 PM ET,17,Eintracht Frankfurt,FC Bayern München,TIMED
+2027-01-17,09:30 AM ET,17,SV Werder Bremen,SV 07 Elversberg,TIMED
+2027-01-17,11:30 AM ET,17,Bayer 04 Leverkusen,FC Schalke 04,TIMED
+2027-01-22,02:30 PM ET,18,SV Werder Bremen,SC Freiburg,TIMED
+2027-01-23,09:30 AM ET,18,SC Paderborn 07,1. FSV Mainz 05,TIMED
+2027-01-23,09:30 AM ET,18,FC Schalke 04,FC Augsburg,TIMED
+2027-01-23,09:30 AM ET,18,VfB Stuttgart,FC Bayern München,TIMED
+2027-01-23,09:30 AM ET,18,Borussia Mönchengladbach,RB Leipzig,TIMED
+2027-01-23,12:30 PM ET,18,Hamburger SV,Borussia Dortmund,TIMED
+2027-01-24,09:30 AM ET,18,Eintracht Frankfurt,1. FC Union Berlin,TIMED
+2027-01-24,11:30 AM ET,18,Bayer 04 Leverkusen,SV 07 Elversberg,TIMED
+2027-01-24,01:30 PM ET,18,TSG 1899 Hoffenheim,1. FC Köln,TIMED
 2027-01-29,07:00 PM ET,19,SV 07 Elversberg,Borussia Mönchengladbach,SCHEDULED
 2027-01-29,07:00 PM ET,19,FC Augsburg,Eintracht Frankfurt,SCHEDULED
 2027-01-29,07:00 PM ET,19,1. FSV Mainz 05,Hamburger SV,SCHEDULED
