@@ -1,5 +1,4 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-11-21,FC Schalke 04,N/A,,,
 2026-11-22,FC Augsburg,N/A,,,
 2026-11-22,SV Werder Bremen,N/A,,,
 2026-11-27,SV Werder Bremen,N/A,,,
@@ -14,7 +13,7 @@ Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
 2026-12-04,FC Bayern München,N/A,,,
 2026-12-05,1. FC Union Berlin,N/A,,,
 2026-12-05,Bayer 04 Leverkusen,N/A,,,
-2026-12-05,RB Leipzig,Rainy,1.2,4.2,13.3
+2026-12-05,RB Leipzig,Partly cloudy,-3.7,0.0,13.0
 2026-12-05,SC Freiburg,N/A,,,
 2026-12-05,FC Augsburg,N/A,,,
 2026-12-05,Eintracht Frankfurt,N/A,,,
